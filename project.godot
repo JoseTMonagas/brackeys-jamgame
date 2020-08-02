@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://Script/StateMachine.gd"
+} ]
 _global_script_class_icons={
-
+"StateMachine": ""
 }
 
 [application]
@@ -48,6 +53,17 @@ ui_down={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[layer_names]
+
+3d_render/layer_1="Floor"
+3d_physics/layer_1="Floor"
+3d_render/layer_2="Player"
+3d_physics/layer_2="Player"
+3d_render/layer_3="Creature"
+3d_physics/layer_3="Creature"
+3d_render/layer_4="Prop"
+3d_physics/layer_4="Prop"
 
 [rendering]
 
