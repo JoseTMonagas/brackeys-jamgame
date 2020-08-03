@@ -15,6 +15,7 @@ func _state_logic(delta):
 func _get_transition(_delta):
 	match current_state:
 		states.idle:
+			print(parent.rest_timer.time_left)
 			if parent.player_in_range || parent.rest_timer.is_stopped():
 			  return states.chase
 		states.chase:

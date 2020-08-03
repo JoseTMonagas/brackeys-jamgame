@@ -10,6 +10,7 @@ const CHASE_TIME = {
 	"MIN": 30,
 	"MAX": 60
 }
+const DEVOURED_SCENE = "res://Animations/Devoured.tscn"
 
 export (NodePath) var player_path
 
@@ -61,3 +62,8 @@ func _on_DetectionArea_body_entered(body):
 
 func _on_DetectionArea_body_exited(body):
 	player_in_range = false
+
+
+func _on_AttackArea_body_entered(body):
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_tree().change_scene(DEVOURED_SCENE)
