@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/monument1.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "monument_empty"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="CylinderShape" id=3]
+radius = 0.230873
+height = 0.503451
+
+[node name="Monument1" type="StaticBody"]
+
+[node name="Sprite" type="Sprite3D" parent="."]
+billboard = 1
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+anims/monument_empty = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.998763, 0.00528078, -0.0494511, -0.00561269, 0.999963, -0.00657602, 0.0494145, 0.00684545, 0.998755, 0, -0.0543257, 0 )
+shape = SubResource( 3 )

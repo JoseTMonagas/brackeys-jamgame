@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Devoured.png-d90119dc86b4dc99aadc0a4327bf3aab.stex"
+path="res://.import/monument1.png-f817e6e18b218df674400b7469de3616.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/Devoured.png"
-dest_files=[ "res://.import/Devoured.png-d90119dc86b4dc99aadc0a4327bf3aab.stex" ]
+source_file="res://Resources/Aseprite/monument1.png"
+dest_files=[ "res://.import/monument1.png-f817e6e18b218df674400b7469de3616.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
