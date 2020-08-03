@@ -22,7 +22,7 @@ __meta__ = {
 }
 
 [node name="Creature" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.74941, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.17965, 0 )
 player_path = NodePath("../Player")
 
 [node name="Monument1" parent="." instance=ExtResource( 3 )]
