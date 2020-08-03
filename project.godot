@@ -21,7 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="brackeys-0"
+run/main_scene="res://UI/Start.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Global/Global.gd"
 
 [input]
 
