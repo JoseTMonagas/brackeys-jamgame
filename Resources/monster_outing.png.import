@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Devoured.png-d90119dc86b4dc99aadc0a4327bf3aab.stex"
+path="res://.import/monster_outing.png-532ed7c822b732be176b89386f9b0fb0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Animations/Devoured.png"
-dest_files=[ "res://.import/Devoured.png-d90119dc86b4dc99aadc0a4327bf3aab.stex" ]
+source_file="res://Resources/monster_outing.png"
+dest_files=[ "res://.import/monster_outing.png-532ed7c822b732be176b89386f9b0fb0.stex" ]
 
 [params]
 
@@ -23,8 +23,8 @@ flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=1
-process/fix_alpha_border=true
+flags/srgb=0
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
