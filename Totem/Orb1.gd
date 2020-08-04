@@ -13,6 +13,7 @@ export (NodePath) var player_path
 func _ready():
 	#sets player as the "player" node
 	player = get_node(player_path)
+	$AnimationPlayer.play("orb_1")
 
 
 #sends the player the orb's number

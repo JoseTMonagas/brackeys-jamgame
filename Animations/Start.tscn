@@ -45,3 +45,4 @@ scale = Vector2( 8.375, 6.8125 )
 texture = ExtResource( 1 )
 centered = false
 hframes = 9
+frame = 8

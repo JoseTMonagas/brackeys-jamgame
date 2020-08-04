@@ -43,7 +43,6 @@ position = Vector2( 515.362, 384 )
 scale = Vector2( 9.07247, 8.12891 )
 texture = ExtResource( 1 )
 hframes = 9
-frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/default = SubResource( 1 )
