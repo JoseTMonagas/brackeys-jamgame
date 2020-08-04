@@ -40,8 +40,8 @@ script = ExtResource( 2 )
 anims/default = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 136, 0 )
-scale = Vector2( 6.07601, 4.57648 )
+position = Vector2( -24, -48 )
+scale = Vector2( 8.375, 6.8125 )
 texture = ExtResource( 1 )
 centered = false
 hframes = 9

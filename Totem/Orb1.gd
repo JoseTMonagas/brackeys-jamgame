@@ -10,16 +10,15 @@ export (NodePath) var player_path
 
 
 
-
 func _ready():
+	#sets player as the "player" node
 	player = get_node(player_path)
-	pass
 
 
+#sends the player the orb's number
 func player_owns(var orb_number):
 	player.owns_orb(orb_number)
 	pass
-
 
 
 
@@ -28,5 +27,6 @@ func _on_Area_body_entered(body):
 	if body.name=="Player":
 		player_owned = true
 		player_owns("orb1")
+		get_tree().queue_delete(self)
 		pass
 	pass # Replace with function body.
