@@ -6,6 +6,15 @@ const SPEED = 10
 var direction = Vector3.ZERO
 var velocity = Vector3.ZERO
 
+
+#owned orbs
+var owned_orb_1 = false
+var owned_orb_2 = false
+var owned_orb_3 = false
+var owned_orb_4 = false
+var owned_orb_5 = false
+
+
 onready var camera = $Camera
 
 var MOUSE_SENSITIVITY = 0.05
@@ -44,3 +53,25 @@ func _input(event):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+#check whether the player owns orbs to update monuments sprites and activate rewinds
+func owns_orb(var orb_number):
+	match orb_number:
+		"orb1":
+			owned_orb_1=true
+			pass
+		"orb2":
+			
+			pass
+		"orb3":
+			
+			pass
+		"orb4":
+			
+			pass
+		"orb5":
+			
+			pass
+
+
+

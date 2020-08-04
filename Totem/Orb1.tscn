@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Resources/orb1.png" type="Texture" id=1]
+[ext_resource path="res://Totem/Area.gd" type="Script" id=2]
+[ext_resource path="res://Totem/Orb1.gd" type="Script" id=3]
 
 [sub_resource type="SphereShape" id=1]
 radius = 0.0828644
@@ -27,6 +29,7 @@ radius = 0.177227
 height = 2.24658
 
 [node name="Orb1" type="StaticBody"]
+script = ExtResource( 3 )
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00290754 )
@@ -42,6 +45,8 @@ shape = SubResource( 1 )
 anims/orb_1 = SubResource( 2 )
 
 [node name="Area" type="Area" parent="."]
+script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 3 )
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
