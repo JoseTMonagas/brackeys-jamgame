@@ -15,18 +15,21 @@ func _state_logic(delta):
 func _get_transition(_delta):
 	match current_state:
 		states.idle:
-			print(parent.rest_timer.time_left)
-			if parent.player_in_range || parent.rest_timer.is_stopped():
+			if parent.force_chase || parent.player_in_range || parent.rest_timer.is_stopped():
 			  return states.chase
 		states.chase:
-			if !parent.player_in_range && parent.chase_timer.is_stopped():
+			if parent.force_rest || !parent.player_in_range && parent.chase_timer.is_stopped():
 				return states.idle
 	return null
 
 
-func _enter_state(new_state, old_state):
+func _enter_state(new_state, _old_state):
 	match new_state:
 		states.idle:
+			if parent.force_rest:
+				parent.force_rest = false
 			parent._start_rest()
 		states.chase:
+			if parent.force_chase:
+				parent.force_chase = false
 			parent._start_chase()

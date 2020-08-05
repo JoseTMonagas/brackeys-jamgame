@@ -19,6 +19,8 @@ var velocity = Vector3.ZERO
 var player = null
 var player_in_range = false
 var is_chasing = false
+var force_chase = false
+var force_rest = false
 
 onready var rest_timer = $RestTimer
 onready var chase_timer = $ChaseTimer
@@ -34,7 +36,7 @@ func _get_player_distance():
 	return (self_position - player_position).normalized() * -1
 
 
-func _resolve_movement(delta):
+func _resolve_movement(_delta):
 	if is_chasing:
 	  var distance = _get_player_distance()
 	  velocity = Vector3(distance.x * SPEED, distance.y * SPEED, distance.z * SPEED)
@@ -44,12 +46,16 @@ func _resolve_movement(delta):
 
 
 func _start_rest():
+	if !chase_timer.is_stopped():
+		chase_timer.stop()
 	is_chasing = false
 	var time = randi() % REST_TIME.MAX + REST_TIME.MIN
 	rest_timer.start(time)
 
 
 func _start_chase():
+	if !rest_timer.is_stopped():
+		rest_timer.stop()
 	is_chasing = true
 	var time = randi() % CHASE_TIME.MAX + CHASE_TIME.MIN
 	chase_timer.start(time)
@@ -57,13 +63,15 @@ func _start_chase():
 
 
 func _on_DetectionArea_body_entered(body):
-	player_in_range = true
+	if body.name == "Player":
+		player_in_range = true
 
 
 func _on_DetectionArea_body_exited(body):
-	player_in_range = false
+	if body.name == "Player":
+		player_in_range = false
 
 
-func _on_AttackArea_body_entered(body):
+func _on_AttackArea_body_entered(_body):
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	get_tree().change_scene(DEVOURED_SCENE)
+	assert(get_tree().change_scene(DEVOURED_SCENE))
