@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Font/CrimsonText-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Settings.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFont" id=1]
-size = 52
+[sub_resource type="DynamicFont" id=10]
+size = 32
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -15,11 +15,15 @@ font_data = ExtResource( 1 )
 size = 24
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 1 )
+
 [sub_resource type="DynamicFont" id=4]
 size = 24
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 32
 font_data = ExtResource( 1 )
 
@@ -31,52 +35,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="TabContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-scroll_horizontal_enabled = false
+custom_fonts/font = SubResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Rows" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 1098.0
-margin_bottom = 586.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Audio" type="VBoxContainer" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 
-[node name="Padding" type="Label" parent="ScrollContainer/Rows"]
+[node name="Audio" type="Label" parent="TabContainer/Audio"]
 margin_right = 1098.0
-margin_bottom = 14.0
-
-[node name="Title" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 18.0
-margin_right = 1098.0
-margin_bottom = 87.0
-custom_fonts/font = SubResource( 1 )
-text = "SETTINGS_TITLE"
-align = 1
-
-[node name="Padding2" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 91.0
-margin_right = 1098.0
-margin_bottom = 105.0
-
-[node name="Audio" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 109.0
-margin_right = 1098.0
-margin_bottom = 152.0
+margin_bottom = 43.0
 custom_fonts/font = SubResource( 2 )
 text = "SETTINGS_AUDIO"
 align = 1
 
-[node name="AudioAllCols" type="HBoxContainer" parent="ScrollContainer/Rows"]
-margin_top = 156.0
+[node name="AudioAllCols" type="HBoxContainer" parent="TabContainer/Audio"]
+margin_top = 47.0
 margin_right = 1098.0
-margin_bottom = 188.0
+margin_bottom = 79.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="AllLabel" type="Label" parent="ScrollContainer/Rows/AudioAllCols"]
+[node name="AllLabel" type="Label" parent="TabContainer/Audio/AudioAllCols"]
 margin_right = 363.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
@@ -84,7 +75,7 @@ custom_fonts/font = SubResource( 3 )
 text = "SETTINGS_AUDIO_ALL"
 align = 2
 
-[node name="AllSlider" type="HSlider" parent="ScrollContainer/Rows/AudioAllCols"]
+[node name="AllSlider" type="HSlider" parent="TabContainer/Audio/AudioAllCols"]
 margin_left = 367.0
 margin_right = 730.0
 margin_bottom = 16.0
@@ -92,19 +83,22 @@ size_flags_horizontal = 3
 max_value = 1.0
 step = 0.1
 
-[node name="AllPercent" type="Label" parent="ScrollContainer/Rows/AudioAllCols"]
+[node name="AllPercent" type="Label" parent="TabContainer/Audio/AudioAllCols"]
 margin_left = 734.0
 margin_right = 1098.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 
-[node name="AudioBGMCols" type="HBoxContainer" parent="ScrollContainer/Rows"]
-margin_top = 192.0
+[node name="AudioBGMCols" type="HBoxContainer" parent="TabContainer/Audio"]
+margin_top = 83.0
 margin_right = 1098.0
-margin_bottom = 224.0
+margin_bottom = 115.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="BGMLabel" type="Label" parent="ScrollContainer/Rows/AudioBGMCols"]
+[node name="BGMLabel" type="Label" parent="TabContainer/Audio/AudioBGMCols"]
 margin_right = 363.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
@@ -112,7 +106,7 @@ custom_fonts/font = SubResource( 3 )
 text = "SETTINGS_AUDIO_BGM"
 align = 2
 
-[node name="BGMSlider" type="HSlider" parent="ScrollContainer/Rows/AudioBGMCols"]
+[node name="BGMSlider" type="HSlider" parent="TabContainer/Audio/AudioBGMCols"]
 margin_left = 367.0
 margin_right = 730.0
 margin_bottom = 16.0
@@ -120,19 +114,19 @@ size_flags_horizontal = 3
 max_value = 1.0
 step = 0.1
 
-[node name="BGMPercent" type="Label" parent="ScrollContainer/Rows/AudioBGMCols"]
+[node name="BGMPercent" type="Label" parent="TabContainer/Audio/AudioBGMCols"]
 margin_left = 734.0
 margin_right = 1098.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 
-[node name="AudioSFXCols" type="HBoxContainer" parent="ScrollContainer/Rows"]
-margin_top = 228.0
+[node name="AudioSFXCols" type="HBoxContainer" parent="TabContainer/Audio"]
+margin_top = 119.0
 margin_right = 1098.0
-margin_bottom = 260.0
+margin_bottom = 151.0
 
-[node name="SfxLabel" type="Label" parent="ScrollContainer/Rows/AudioSFXCols"]
+[node name="SfxLabel" type="Label" parent="TabContainer/Audio/AudioSFXCols"]
 margin_right = 363.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
@@ -140,7 +134,7 @@ custom_fonts/font = SubResource( 3 )
 text = "SETTINGS_AUDIO_SFX"
 align = 2
 
-[node name="SfxSlider" type="HSlider" parent="ScrollContainer/Rows/AudioSFXCols"]
+[node name="SfxSlider" type="HSlider" parent="TabContainer/Audio/AudioSFXCols"]
 margin_left = 367.0
 margin_right = 730.0
 margin_bottom = 16.0
@@ -148,82 +142,157 @@ size_flags_horizontal = 3
 max_value = 1.0
 step = 0.1
 
-[node name="SfxPercent" type="Label" parent="ScrollContainer/Rows/AudioSFXCols"]
+[node name="SfxPercent" type="Label" parent="TabContainer/Audio/AudioSFXCols"]
 margin_left = 734.0
 margin_right = 1098.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 
-[node name="Padding3" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 264.0
-margin_right = 1098.0
-margin_bottom = 278.0
+[node name="Control" type="VBoxContainer" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 61.0
+margin_right = -4.0
+margin_bottom = -4.0
 
-[node name="Mouse" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 282.0
-margin_right = 1098.0
-margin_bottom = 325.0
+[node name="Mouse" type="Label" parent="TabContainer/Control"]
+margin_right = 1016.0
+margin_bottom = 43.0
 custom_fonts/font = SubResource( 2 )
 text = "SETTINGS_MOUSE"
 align = 1
 
-[node name="MouseCols" type="HBoxContainer" parent="ScrollContainer/Rows"]
-margin_top = 329.0
-margin_right = 1098.0
-margin_bottom = 361.0
+[node name="MouseCols" type="HBoxContainer" parent="TabContainer/Control"]
+margin_top = 47.0
+margin_right = 1016.0
+margin_bottom = 79.0
 
-[node name="SensisitivityLabel" type="Label" parent="ScrollContainer/Rows/MouseCols"]
-margin_right = 363.0
+[node name="SensisitivityLabel" type="Label" parent="TabContainer/Control/MouseCols"]
+margin_right = 351.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 text = "SETTINGS_MOUSE_SENSITIVITY"
 align = 2
 
-[node name="SenseSlider" type="HSlider" parent="ScrollContainer/Rows/MouseCols"]
-margin_left = 367.0
-margin_right = 730.0
+[node name="SenseSlider" type="HSlider" parent="TabContainer/Control/MouseCols"]
+margin_left = 355.0
+margin_right = 683.0
 margin_bottom = 16.0
 size_flags_horizontal = 3
 min_value = 1.0
 max_value = 20.0
-step = 1.0
 value = 1.0
 
-[node name="SenseValue" type="Label" parent="ScrollContainer/Rows/MouseCols"]
-margin_left = 734.0
-margin_right = 1098.0
+[node name="SenseValue" type="Label" parent="TabContainer/Control/MouseCols"]
+margin_left = 687.0
+margin_right = 1016.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 
-[node name="Padding4" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 365.0
-margin_right = 1098.0
-margin_bottom = 379.0
+[node name="Controls" type="Label" parent="TabContainer/Control"]
+margin_top = 83.0
+margin_right = 1016.0
+margin_bottom = 126.0
+custom_fonts/font = SubResource( 2 )
+text = "SETTINGS_CONTROL"
+align = 1
 
-[node name="Language" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 383.0
+[node name="ControlCols" type="VBoxContainer" parent="TabContainer/Control"]
+margin_top = 130.0
+margin_right = 1016.0
+margin_bottom = 348.0
+
+[node name="Forward" type="Button" parent="TabContainer/Control/ControlCols"]
+margin_left = 408.0
+margin_right = 608.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+
+[node name="Label2" type="Label" parent="TabContainer/Control/ControlCols"]
+margin_top = 42.0
+margin_right = 1016.0
+margin_bottom = 56.0
+
+[node name="Backward" type="Button" parent="TabContainer/Control/ControlCols"]
+margin_left = 408.0
+margin_top = 60.0
+margin_right = 608.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+
+[node name="Label" type="Label" parent="TabContainer/Control/ControlCols"]
+margin_top = 102.0
+margin_right = 1016.0
+margin_bottom = 116.0
+
+[node name="Left" type="Button" parent="TabContainer/Control/ControlCols"]
+margin_left = 408.0
+margin_top = 120.0
+margin_right = 608.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+
+[node name="Label3" type="Label" parent="TabContainer/Control/ControlCols"]
+margin_top = 162.0
+margin_right = 1016.0
+margin_bottom = 176.0
+
+[node name="Right" type="Button" parent="TabContainer/Control/ControlCols"]
+margin_left = 408.0
+margin_top = 180.0
+margin_right = 608.0
+margin_bottom = 218.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+
+[node name="Language" type="VBoxContainer" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Language" type="Label" parent="TabContainer/Language"]
 margin_right = 1098.0
-margin_bottom = 426.0
+margin_bottom = 43.0
 custom_fonts/font = SubResource( 2 )
 text = "SETTINGS_LANGUAGE"
 align = 1
 
-[node name="LanguageCols" type="HBoxContainer" parent="ScrollContainer/Rows"]
-margin_top = 430.0
+[node name="LanguageCols" type="VBoxContainer" parent="TabContainer/Language"]
+margin_top = 47.0
 margin_right = 1098.0
-margin_bottom = 468.0
+margin_bottom = 85.0
 
-[node name="EnglishButton" type="Button" parent="ScrollContainer/Rows/LanguageCols"]
+[node name="Label" type="Label" parent="TabContainer/Language/LanguageCols"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="EnglishButton" type="Button" parent="TabContainer/Language/LanguageCols"]
 margin_right = 366.0
 margin_bottom = 38.0
 custom_fonts/font = SubResource( 4 )
 text = "SETTINGS_LANGUAGE_ENGLISH"
 flat = true
 
-[node name="SpanishButton" type="Button" parent="ScrollContainer/Rows/LanguageCols"]
+[node name="Label2" type="Label" parent="TabContainer/Language/LanguageCols"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="SpanishButton" type="Button" parent="TabContainer/Language/LanguageCols"]
 margin_left = 370.0
 margin_right = 734.0
 margin_bottom = 38.0
@@ -231,7 +300,11 @@ custom_fonts/font = SubResource( 4 )
 text = "SETTINGS_LANGUAGE_SPANISH"
 flat = true
 
-[node name="FrenchButton" type="Button" parent="ScrollContainer/Rows/LanguageCols"]
+[node name="Label3" type="Label" parent="TabContainer/Language/LanguageCols"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="FrenchButton" type="Button" parent="TabContainer/Language/LanguageCols"]
 margin_left = 738.0
 margin_right = 1098.0
 margin_bottom = 38.0
@@ -239,31 +312,44 @@ custom_fonts/font = SubResource( 4 )
 text = "SETTINGS_LANGUAGE_FRENCH"
 flat = true
 
-[node name="ControlsTODO" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 472.0
-margin_right = 1098.0
-margin_bottom = 515.0
-custom_fonts/font = SubResource( 2 )
-text = "SETTINGS_CONTROL"
-align = 1
-
-[node name="Padding5" type="Label" parent="ScrollContainer/Rows"]
-margin_top = 519.0
-margin_right = 1098.0
-margin_bottom = 533.0
-
-[node name="Return" type="Button" parent="ScrollContainer/Rows"]
-margin_top = 537.0
-margin_right = 1098.0
-margin_bottom = 586.0
-custom_fonts/font = SubResource( 5 )
+[node name="Return" type="Button" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -49.0
+custom_fonts/font = SubResource( 6 )
 text = "SETTINGS_RETURN"
 flat = true
-[connection signal="value_changed" from="ScrollContainer/Rows/AudioAllCols/AllSlider" to="." method="_on_AllSlider_value_changed"]
-[connection signal="value_changed" from="ScrollContainer/Rows/AudioBGMCols/BGMSlider" to="." method="_on_BGMSlider_value_changed"]
-[connection signal="value_changed" from="ScrollContainer/Rows/AudioSFXCols/SfxSlider" to="." method="_on_SfxSlider_value_changed"]
-[connection signal="value_changed" from="ScrollContainer/Rows/MouseCols/SenseSlider" to="." method="_on_SenseSlider_value_changed"]
-[connection signal="pressed" from="ScrollContainer/Rows/LanguageCols/EnglishButton" to="." method="_on_EnglishButton_pressed"]
-[connection signal="pressed" from="ScrollContainer/Rows/LanguageCols/SpanishButton" to="." method="_on_SpanishButton_pressed"]
-[connection signal="pressed" from="ScrollContainer/Rows/LanguageCols/FrenchButton" to="." method="_on_FrenchButton_pressed"]
-[connection signal="pressed" from="ScrollContainer/Rows/Return" to="." method="_on_Return_pressed"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputPopup" type="ConfirmationDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -615.5
+margin_top = -125.0
+margin_right = 615.5
+margin_bottom = 125.0
+window_title = "SETTINGS_CONTROL_DIALOG_TITLE"
+dialog_text = "SETTINGS_CONTROL_DIALOG_TEXT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="value_changed" from="TabContainer/Audio/AudioAllCols/AllSlider" to="." method="_on_AllSlider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Audio/AudioBGMCols/BGMSlider" to="." method="_on_BGMSlider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Audio/AudioSFXCols/SfxSlider" to="." method="_on_SfxSlider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Control/MouseCols/SenseSlider" to="." method="_on_SenseSlider_value_changed"]
+[connection signal="pressed" from="TabContainer/Control/ControlCols/Forward" to="." method="_on_Forward_pressed"]
+[connection signal="pressed" from="TabContainer/Control/ControlCols/Backward" to="." method="_on_Backward_pressed"]
+[connection signal="pressed" from="TabContainer/Control/ControlCols/Left" to="." method="_on_Left_pressed"]
+[connection signal="pressed" from="TabContainer/Control/ControlCols/Right" to="." method="_on_Right_pressed"]
+[connection signal="pressed" from="TabContainer/Language/LanguageCols/EnglishButton" to="." method="_on_EnglishButton_pressed"]
+[connection signal="pressed" from="TabContainer/Language/LanguageCols/SpanishButton" to="." method="_on_SpanishButton_pressed"]
+[connection signal="pressed" from="TabContainer/Language/LanguageCols/FrenchButton" to="." method="_on_FrenchButton_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]
+[connection signal="confirmed" from="InputPopup" to="." method="_on_InputPopup_confirmed"]
+[connection signal="popup_hide" from="InputPopup" to="." method="_on_InputPopup_popup_hide"]
