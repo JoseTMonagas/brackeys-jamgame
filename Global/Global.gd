@@ -24,7 +24,9 @@ func load_setting(section, key, default):
 
 
 func change_scene(path):
-	get_tree().change_scene(path)
+	var err = (get_tree().change_scene(path))
+	if err != OK:
+		print("Failed to load scene: ", path)
 
 
 func quit():
