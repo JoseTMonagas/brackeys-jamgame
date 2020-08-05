@@ -35,7 +35,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00290754 )
 billboard = 1
 texture = ExtResource( 1 )
 hframes = 4
-frame = 1
+frame = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00598648, -0.013701, 0 )
