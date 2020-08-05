@@ -1,8 +1,8 @@
 extends StaticBody
 
+signal activated
+
 onready var Animation_Player = $AnimationPlayer
-
-
 onready var monsterSummonMovie = "res://Animations/Monster_Summoning.tscn"
 
 
@@ -21,6 +21,5 @@ func _ready():
 func _on_Area_body_entered(body):
 	if body.name=="Player":
 		if player.owned_orb_1==true:
-			get_tree().change_scene(monsterSummonMovie)
+			emit_signal("activated")
 			Animation_Player.play("monument_placed_orb")
-			pass
