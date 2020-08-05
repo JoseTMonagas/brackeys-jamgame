@@ -30,75 +30,75 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Rows"]
-margin_top = 353.0
+margin_top = 293.0
 margin_right = 10.0
-margin_bottom = 367.0
+margin_bottom = 307.0
 rect_min_size = Vector2( 10, 0 )
 
 [node name="Cols" type="VBoxContainer" parent="Rows"]
 margin_left = 14.0
 margin_right = 322.0
-margin_bottom = 720.0
+margin_bottom = 600.0
 theme = SubResource( 2 )
 
 [node name="Padding3" type="Label" parent="Rows/Cols"]
-margin_top = 74.0
+margin_top = 44.0
 margin_right = 308.0
-margin_bottom = 117.0
+margin_bottom = 87.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Title" type="Label" parent="Rows/Cols"]
-margin_top = 196.0
+margin_top = 136.0
 margin_right = 308.0
-margin_bottom = 265.0
+margin_bottom = 205.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 text = "TITLE_TITLE"
 
 [node name="Padding" type="Label" parent="Rows/Cols"]
-margin_top = 343.0
+margin_top = 253.0
 margin_right = 308.0
-margin_bottom = 386.0
+margin_bottom = 296.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Start" type="Button" parent="Rows/Cols"]
-margin_top = 465.0
+margin_top = 345.0
 margin_right = 308.0
-margin_bottom = 514.0
+margin_bottom = 394.0
 text = "TITLE_START"
 flat = true
 align = 0
 
 [node name="Settings" type="Button" parent="Rows/Cols"]
-margin_top = 518.0
+margin_top = 398.0
 margin_right = 308.0
-margin_bottom = 567.0
+margin_bottom = 447.0
 text = "TITLE_SETTINGS"
 flat = true
 align = 0
 
 [node name="Credits" type="Button" parent="Rows/Cols"]
-margin_top = 571.0
+margin_top = 451.0
 margin_right = 308.0
-margin_bottom = 620.0
+margin_bottom = 500.0
 text = "TITLE_CREDITS"
 flat = true
 align = 0
 
 [node name="Exit" type="Button" parent="Rows/Cols"]
-margin_top = 624.0
+margin_top = 504.0
 margin_right = 308.0
-margin_bottom = 673.0
+margin_bottom = 553.0
 text = "TITLE_EXIT"
 flat = true
 align = 0
 
 [node name="Padding2" type="Label" parent="Rows/Cols"]
-margin_top = 677.0
+margin_top = 557.0
 margin_right = 308.0
-margin_bottom = 720.0
+margin_bottom = 600.0
 size_flags_horizontal = 3
 [connection signal="mouse_entered" from="Rows/Cols/Start" to="." method="_on_Start_mouse_entered"]
 [connection signal="pressed" from="Rows/Cols/Start" to="." method="_on_Start_pressed"]
