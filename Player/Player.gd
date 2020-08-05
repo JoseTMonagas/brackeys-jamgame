@@ -39,7 +39,7 @@ func _handle_input():
 	direction = direction.normalized()
 
 
-func _resolve_movement(delta):
+func _resolve_movement(_delta):
 	velocity = Vector3(lerp(velocity.x, direction.x * SPEED, 0.2), -1, lerp(velocity.z, direction.z * SPEED, 0.2))
 	velocity = move_and_slide_with_snap(velocity, Vector3.DOWN, Vector3.UP)
 
