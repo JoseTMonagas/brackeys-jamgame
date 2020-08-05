@@ -27,7 +27,7 @@ func player_owns(var orb_number):
 func _on_Area_body_entered(body):
 	if body.name=="Player":
 		player_owned = true
-		player_owns("orb_white")
+		player_owns("orb_blue")
 		get_tree().queue_delete(self)
 		pass
 	pass # Replace with function body.

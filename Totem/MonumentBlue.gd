@@ -3,7 +3,7 @@ extends StaticBody
 signal activated
 
 onready var Animation_Player = $AnimationPlayer
-onready var monsterSummonMovie = "res://Animations/Monster_Summoning.tscn"
+#onready var monsterSummonMovie = "res://Animations/Monster_Summoning.tscn"
 
 
 #this is to stop a crash at run time 
@@ -14,12 +14,12 @@ export (NodePath) var player_path
 
 func _ready():
 	player = get_node(player_path)
-	Animation_Player.play("monument_empty")
+	Animation_Player.play("MonumentEmpty")
 
 
 
 func _on_Area_body_entered(body):
 	if body.name=="Player":
-		if player.owned_orb_white==true:
+		if player.owned_orb_blue==true:
 			emit_signal("activated")
-			Animation_Player.play("monument_placed_orb")
+			Animation_Player.play("MonumentOrbPlaced")

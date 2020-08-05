@@ -7,7 +7,7 @@
 radius = 0.0828644
 
 [sub_resource type="Animation" id=2]
-resource_name = "orb_1"
+resource_name = "OrbIdle"
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -40,7 +40,7 @@ hframes = 4
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/orb_1 = SubResource( 2 )
+anims/OrbIdle = SubResource( 2 )
 
 [node name="Area" type="Area" parent="."]
 

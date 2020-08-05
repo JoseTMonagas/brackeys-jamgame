@@ -8,11 +8,11 @@ var velocity = Vector3.ZERO
 
 
 #owned orbs
-var owned_orb_1 = false
-var owned_orb_2 = false
-var owned_orb_3 = false
-var owned_orb_4 = false
-var owned_orb_5 = false
+var owned_orb_white = false
+var owned_orb_blue = false
+var owned_orb_green = false
+var owned_orb_yellow = false
+var owned_orb_pink = false
 
 
 onready var camera = $Camera
@@ -57,20 +57,20 @@ func _input(event):
 #check whether the player owns orbs to update monuments sprites and activate rewinds
 func owns_orb(var orb_number):
 	match orb_number:
-		"orb1":
-			owned_orb_1=true
+		"orb_white":
+			owned_orb_white=true
 			pass
-		"orb2":
-			
+		"orb_blue":
+			owned_orb_blue=true
 			pass
-		"orb3":
-			
+		"orb_green":
+			owned_orb_green=true
 			pass
-		"orb4":
-			
+		"orb_yellow":
+			owned_orb_yellow=true
 			pass
-		"orb5":
-			
+		"orb_pink":
+			owned_orb_pink=true
 			pass
 
 
