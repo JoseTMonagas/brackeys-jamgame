@@ -23,9 +23,8 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="CylinderShape" id=3]
-radius = 0.177227
-height = 2.24658
+[sub_resource type="SphereShape" id=3]
+radius = 0.5
 
 [node name="Orb1" type="StaticBody"]
 script = ExtResource( 3 )
@@ -36,7 +35,6 @@ billboard = 1
 texture = ExtResource( 1 )
 vframes = 5
 hframes = 4
-frame = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )
