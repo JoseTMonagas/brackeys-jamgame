@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spooky_tree_1.png-7424d50d6ccfeec459c94eaf77bcbc27.stex"
+path="res://.import/BigTree.png-080fb7fb8cf7bcb18ae8e2c43c42e9b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/spooky_tree_1.png"
-dest_files=[ "res://.import/spooky_tree_1.png-7424d50d6ccfeec459c94eaf77bcbc27.stex" ]
+source_file="res://Resources/Aseprite/BigTree.png"
+dest_files=[ "res://.import/BigTree.png-080fb7fb8cf7bcb18ae8e2c43c42e9b2.stex" ]
 
 [params]
 

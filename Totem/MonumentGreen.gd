@@ -23,3 +23,5 @@ func _on_Area_body_entered(body):
 		if player.owned_orb_green==true:
 			emit_signal("activated")
 			Animation_Player.play("MonumentOrbPlaced")
+
+

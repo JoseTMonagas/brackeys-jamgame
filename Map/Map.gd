@@ -7,11 +7,8 @@ onready var creature = $Creature
 onready var FarmLocked = get_node("Farm/Locked")
 onready var FarmUnlocked = get_node("Farm/Unlocked")
 
-#export (NodePath) var FarmPath
-
-#func _ready():
-#	Farm = get_node(FarmPath)
-#	pass
+onready var TreeLocked = get_node("BigTree/Locked")
+onready var TreeUnlocked = get_node("BigTree/Unlocked")
 
 
 func _play_cutscene(node_name, animation_name):
@@ -32,3 +29,10 @@ func _on_MonumentBlue_activated():
 	FarmLocked.visible = false
 	#_play_cutscene("PeredoSummoning", "play_movie_backwards")
 
+
+
+
+func _on_MonumentGreen_activated():
+	TreeLocked.visible = false
+	TreeUnlocked.visible = true
+	pass # Replace with function body.
