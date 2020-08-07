@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Resources/Aseprite/Grass.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Aseprite/RoadTop.png" type="Texture" id=2]
@@ -10,72 +10,86 @@
 [ext_resource path="res://Resources/Aseprite/RoadBottomRight.png" type="Texture" id=8]
 [ext_resource path="res://Resources/Aseprite/RoadTopLeft.png" type="Texture" id=9]
 [ext_resource path="res://Resources/Aseprite/RoadLeft.png" type="Texture" id=10]
+[ext_resource path="res://Resources/Aseprite/Corn.png" type="Texture" id=11]
 
-[sub_resource type="PlaneMesh" id=1]
+[sub_resource type="PlaneMesh" id=48]
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=1]
 flags_unshaded = true
 albedo_texture = ExtResource( 1 )
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 1, 0.001, 1 )
 
-[sub_resource type="PlaneMesh" id=4]
+[sub_resource type="PlaneMesh" id=49]
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=6]
 flags_unshaded = true
 albedo_texture = ExtResource( 3 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=8]
 extents = Vector3( 1, 0.001, 1 )
 
-[sub_resource type="PlaneMesh" id=7]
+[sub_resource type="PlaneMesh" id=50]
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=11]
 flags_unshaded = true
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="BoxShape" id=13]
 extents = Vector3( 1, 0.001, 1 )
 
-[sub_resource type="PlaneMesh" id=10]
-
-[sub_resource type="SpatialMaterial" id=12]
-flags_unshaded = true
-albedo_texture = ExtResource( 4 )
-
-[sub_resource type="BoxShape" id=11]
-extents = Vector3( 1, 0.001, 1 )
-
-[sub_resource type="SpatialMaterial" id=13]
-flags_unshaded = true
-albedo_texture = ExtResource( 6 )
-
-[sub_resource type="SpatialMaterial" id=14]
-flags_unshaded = true
-albedo_texture = ExtResource( 8 )
-
-[sub_resource type="SpatialMaterial" id=15]
-flags_unshaded = true
-albedo_texture = ExtResource( 7 )
+[sub_resource type="PlaneMesh" id=51]
 
 [sub_resource type="SpatialMaterial" id=16]
 flags_unshaded = true
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="BoxShape" id=18]
+extents = Vector3( 1, 0.001, 1 )
+
+[sub_resource type="SpatialMaterial" id=21]
+flags_unshaded = true
+albedo_texture = ExtResource( 6 )
+
+[sub_resource type="SpatialMaterial" id=25]
+flags_unshaded = true
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=29]
+flags_unshaded = true
+albedo_texture = ExtResource( 7 )
+
+[sub_resource type="SpatialMaterial" id=33]
+flags_unshaded = true
 albedo_texture = ExtResource( 5 )
 
-[sub_resource type="SpatialMaterial" id=17]
+[sub_resource type="SpatialMaterial" id=37]
 flags_unshaded = true
 albedo_texture = ExtResource( 10 )
 
-[sub_resource type="SpatialMaterial" id=18]
+[sub_resource type="SpatialMaterial" id=41]
 flags_unshaded = true
 albedo_texture = ExtResource( 9 )
+
+[sub_resource type="BoxShape" id=52]
+extents = Vector3( 0.335259, 0.451827, 0.323055 )
+
+[sub_resource type="PlaneMesh" id=53]
+
+[sub_resource type="SpatialMaterial" id=45]
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = ExtResource( 11 )
+
+[sub_resource type="BoxShape" id=47]
+extents = Vector3( 1, 0.001, 1 )
 
 [node name="Gridmap" type="Spatial"]
 
 [node name="Grass" type="MeshInstance" parent="."]
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+mesh = SubResource( 48 )
+material/0 = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="Grass"]
 
@@ -84,90 +98,126 @@ shape = SubResource( 3 )
 
 [node name="Road" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19525, 0, -0.824459 )
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
+mesh = SubResource( 49 )
+material/0 = SubResource( 6 )
 
 [node name="StaticBody" type="StaticBody" parent="Road"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Road/StaticBody"]
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="RoadTop" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0545063, 0, -2.07042 )
-mesh = SubResource( 7 )
-material/0 = SubResource( 8 )
+mesh = SubResource( 50 )
+material/0 = SubResource( 11 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadTop"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoadTop/StaticBody"]
-shape = SubResource( 9 )
+shape = SubResource( 13 )
 
 [node name="RoadTopRight" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06258, 0, -1.96405 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 12 )
+mesh = SubResource( 51 )
+material/0 = SubResource( 16 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadTopRight"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoadTopRight/StaticBody"]
-shape = SubResource( 11 )
+shape = SubResource( 18 )
 
 [node name="RoadRight" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02963, 0, -0.0404267 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 13 )
+mesh = SubResource( 51 )
+material/0 = SubResource( 21 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadRight"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoadRight/StaticBody"]
-shape = SubResource( 11 )
+shape = SubResource( 18 )
 
 [node name="RoadBottomRight" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97901, 0, 2.1117 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 14 )
+mesh = SubResource( 51 )
+material/0 = SubResource( 25 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadBottomRight"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoadBottomRight/StaticBody"]
-shape = SubResource( 11 )
+shape = SubResource( 18 )
 
 [node name="RoadBottom" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048, 0, 2.125 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 15 )
+mesh = SubResource( 51 )
+material/0 = SubResource( 29 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadBottom"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoadBottom/StaticBody"]
-shape = SubResource( 11 )
+shape = SubResource( 18 )
 
 [node name="RoadBottomLeft" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08937, 0, 1.91239 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 16 )
+mesh = SubResource( 51 )
+material/0 = SubResource( 33 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadBottomLeft"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoadBottomLeft/StaticBody"]
-shape = SubResource( 11 )
+shape = SubResource( 18 )
 
 [node name="RoadLeft" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.05, 0, -0.154 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 17 )
+mesh = SubResource( 51 )
+material/0 = SubResource( 37 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadLeft"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoadLeft/StaticBody"]
-shape = SubResource( 11 )
+shape = SubResource( 18 )
 
 [node name="RoadTopLeft" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17568, 0, -2.062 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 18 )
+mesh = SubResource( 51 )
+material/0 = SubResource( 41 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadTopLeft"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RoadTopLeft/StaticBody"]
-shape = SubResource( 11 )
+shape = SubResource( 18 )
+
+[node name="Wheat" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08378, 0.605629, 1.99447 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Wheat"]
+texture = ExtResource( 11 )
+
+[node name="Sprite3D3" type="Sprite3D" parent="Wheat"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.616742 )
+texture = ExtResource( 11 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Wheat"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0.316604, 0, -0.326361 )
+texture = ExtResource( 11 )
+
+[node name="Sprite3D4" type="Sprite3D" parent="Wheat"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -0.319454, 0, -0.326361 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody" type="StaticBody" parent="Wheat"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Wheat/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20272, -0.305495 )
+shape = SubResource( 52 )
+
+[node name="WheatMesh" type="MeshInstance" parent="."]
+transform = Transform( -1.62921e-07, 1, 0, 1.62921e-07, 2.65431e-14, -1, -1, -1.62921e-07, -1.62921e-07, 7.6078, 0, -0.00738931 )
+layers = 1026
+cast_shadow = 0
+mesh = SubResource( 53 )
+material/0 = SubResource( 45 )
+
+[node name="StaticBody" type="StaticBody" parent="WheatMesh"]
+
+[node name="CollisionShape" type="CollisionShape" parent="WheatMesh/StaticBody"]
+shape = SubResource( 47 )

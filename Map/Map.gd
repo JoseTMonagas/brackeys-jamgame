@@ -30,9 +30,8 @@ func _on_MonumentBlue_activated():
 	#_play_cutscene("PeredoSummoning", "play_movie_backwards")
 
 
-
-
 func _on_MonumentGreen_activated():
 	TreeLocked.visible = false
+	get_tree().queue_delete(TreeLocked)
 	TreeUnlocked.visible = true
 	pass # Replace with function body.
