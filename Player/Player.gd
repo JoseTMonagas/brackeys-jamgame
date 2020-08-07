@@ -20,16 +20,20 @@ onready var footstep_sfx = $Footsteps
 
 var MOUSE_SENSITIVITY = 0.05
 
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 
 func _physics_process(delta):
 	_handle_input()
 	_resolve_movement(delta)
-	if velocity.length() > 1 && !footstep_sfx.playing:
-		footstep_sfx.play()
+	if velocity.length() > 1:
+		if !footstep_sfx.is_playing():
+			footstep_sfx.play()
 	else:
 		footstep_sfx.stop()
+
 
 func _handle_input():
 	direction = Vector3.ZERO
@@ -57,6 +61,7 @@ func _input(event):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 
 #check whether the player owns orbs to update monuments sprites and activate rewinds
 func owns_orb(var orb_number):
