@@ -26,3 +26,7 @@ run/main_scene="res://UI/Start.tscn"
 [autoload]
 
 Global="*res://Global/Global.gd"
+
+[locale]
+
+translations=PoolStringArray( "res://Resources/translations - Hoja 1.en.translation", "res://Resources/translations - Hoja 1.es.translation", "res://Resources/translations - Hoja 1.fr.translation" )

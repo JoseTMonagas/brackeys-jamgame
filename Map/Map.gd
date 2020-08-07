@@ -36,13 +36,10 @@ func _on_MonumentGreen_activated():
 	TreeLocked.visible = false
 	get_tree().queue_delete(TreeLocked)
 	TreeUnlocked.visible = true
-	pass # Replace with function body.
 
 func _on_MonumentYellow_activated():
 	RockLocked.translation.z = -33
-	pass # Replace with function body.
 
 
 func _on_MonumentPink_activated():
 	get_tree().queue_delete(BarsLocked)
-	pass # Replace with function body.
