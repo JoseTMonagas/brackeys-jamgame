@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Animations/Devoured.png" type="Texture" id=1]
 [ext_resource path="res://Animations/Animator.gd" type="Script" id=2]
+[ext_resource path="res://Animations/bite.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "default"
@@ -33,6 +34,18 @@ tracks/1/keys = {
 "method": "_goto"
 } ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Bite:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [node name="Devoured" type="Node2D"]
 script = ExtResource( 2 )
@@ -42,7 +55,11 @@ position = Vector2( 516, 385 )
 scale = Vector2( 8.9375, 8.60937 )
 texture = ExtResource( 1 )
 hframes = 10
-frame = 9
+frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/default = SubResource( 1 )
+
+[node name="Bite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Sfx"
