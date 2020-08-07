@@ -23,5 +23,5 @@ func play_animation_backwards(animation_name):
 	animation_player.play_backwards(animation_name)
 
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished(_anim_name):
 	emit_signal("cutscene_ended")

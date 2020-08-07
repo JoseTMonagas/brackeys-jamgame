@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bite.wav-53d787c11cf954a09f0784c317622f77.sample"
+
+[deps]
+
+source_file="res://Animations/bite.wav"
+dest_files=[ "res://.import/bite.wav-53d787c11cf954a09f0784c317622f77.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

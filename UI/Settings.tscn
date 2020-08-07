@@ -3,7 +3,7 @@
 [ext_resource path="res://Resources/Font/CrimsonText-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/Settings.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 1 )
 
@@ -15,11 +15,11 @@ font_data = ExtResource( 1 )
 size = 24
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 24
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 24
 font_data = ExtResource( 1 )
 
@@ -38,7 +38,7 @@ __meta__ = {
 [node name="TabContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,12 +48,12 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 32.0
+margin_top = 61.0
 margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="Audio" type="Label" parent="TabContainer/Audio"]
-margin_right = 1098.0
+margin_right = 1016.0
 margin_bottom = 43.0
 custom_fonts/font = SubResource( 2 )
 text = "SETTINGS_AUDIO"
@@ -61,14 +61,14 @@ align = 1
 
 [node name="AudioAllCols" type="HBoxContainer" parent="TabContainer/Audio"]
 margin_top = 47.0
-margin_right = 1098.0
+margin_right = 1016.0
 margin_bottom = 79.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AllLabel" type="Label" parent="TabContainer/Audio/AudioAllCols"]
-margin_right = 363.0
+margin_right = 336.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
@@ -76,30 +76,30 @@ text = "SETTINGS_AUDIO_ALL"
 align = 2
 
 [node name="AllSlider" type="HSlider" parent="TabContainer/Audio/AudioAllCols"]
-margin_left = 367.0
-margin_right = 730.0
+margin_left = 340.0
+margin_right = 676.0
 margin_bottom = 16.0
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.1
 
 [node name="AllPercent" type="Label" parent="TabContainer/Audio/AudioAllCols"]
-margin_left = 734.0
-margin_right = 1098.0
+margin_left = 680.0
+margin_right = 1016.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 
 [node name="AudioBGMCols" type="HBoxContainer" parent="TabContainer/Audio"]
 margin_top = 83.0
-margin_right = 1098.0
+margin_right = 1016.0
 margin_bottom = 115.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BGMLabel" type="Label" parent="TabContainer/Audio/AudioBGMCols"]
-margin_right = 363.0
+margin_right = 336.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
@@ -107,27 +107,27 @@ text = "SETTINGS_AUDIO_BGM"
 align = 2
 
 [node name="BGMSlider" type="HSlider" parent="TabContainer/Audio/AudioBGMCols"]
-margin_left = 367.0
-margin_right = 730.0
+margin_left = 340.0
+margin_right = 676.0
 margin_bottom = 16.0
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.1
 
 [node name="BGMPercent" type="Label" parent="TabContainer/Audio/AudioBGMCols"]
-margin_left = 734.0
-margin_right = 1098.0
+margin_left = 680.0
+margin_right = 1016.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 
 [node name="AudioSFXCols" type="HBoxContainer" parent="TabContainer/Audio"]
 margin_top = 119.0
-margin_right = 1098.0
+margin_right = 1016.0
 margin_bottom = 151.0
 
 [node name="SfxLabel" type="Label" parent="TabContainer/Audio/AudioSFXCols"]
-margin_right = 363.0
+margin_right = 336.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
@@ -135,21 +135,22 @@ text = "SETTINGS_AUDIO_SFX"
 align = 2
 
 [node name="SfxSlider" type="HSlider" parent="TabContainer/Audio/AudioSFXCols"]
-margin_left = 367.0
-margin_right = 730.0
+margin_left = 340.0
+margin_right = 676.0
 margin_bottom = 16.0
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.1
 
 [node name="SfxPercent" type="Label" parent="TabContainer/Audio/AudioSFXCols"]
-margin_left = 734.0
-margin_right = 1098.0
+margin_left = 680.0
+margin_right = 1016.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 
 [node name="Control" type="VBoxContainer" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -212,7 +213,7 @@ margin_right = 608.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 
 [node name="Label2" type="Label" parent="TabContainer/Control/ControlCols"]
 margin_top = 42.0
@@ -226,7 +227,7 @@ margin_right = 608.0
 margin_bottom = 98.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 
 [node name="Label" type="Label" parent="TabContainer/Control/ControlCols"]
 margin_top = 102.0
@@ -240,7 +241,7 @@ margin_right = 608.0
 margin_bottom = 158.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 
 [node name="Label3" type="Label" parent="TabContainer/Control/ControlCols"]
 margin_top = 162.0
@@ -254,19 +255,18 @@ margin_right = 608.0
 margin_bottom = 218.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 
 [node name="Language" type="VBoxContainer" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 32.0
+margin_top = 61.0
 margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="Language" type="Label" parent="TabContainer/Language"]
-margin_right = 1098.0
+margin_right = 1016.0
 margin_bottom = 43.0
 custom_fonts/font = SubResource( 2 )
 text = "SETTINGS_LANGUAGE"
@@ -274,41 +274,44 @@ align = 1
 
 [node name="LanguageCols" type="VBoxContainer" parent="TabContainer/Language"]
 margin_top = 47.0
-margin_right = 1098.0
-margin_bottom = 85.0
+margin_right = 1016.0
+margin_bottom = 223.0
 
 [node name="Label" type="Label" parent="TabContainer/Language/LanguageCols"]
-margin_right = 40.0
+margin_right = 1016.0
 margin_bottom = 14.0
 
 [node name="EnglishButton" type="Button" parent="TabContainer/Language/LanguageCols"]
-margin_right = 366.0
-margin_bottom = 38.0
-custom_fonts/font = SubResource( 4 )
+margin_top = 18.0
+margin_right = 1016.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 5 )
 text = "SETTINGS_LANGUAGE_ENGLISH"
 flat = true
 
 [node name="Label2" type="Label" parent="TabContainer/Language/LanguageCols"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_top = 60.0
+margin_right = 1016.0
+margin_bottom = 74.0
 
 [node name="SpanishButton" type="Button" parent="TabContainer/Language/LanguageCols"]
-margin_left = 370.0
-margin_right = 734.0
-margin_bottom = 38.0
-custom_fonts/font = SubResource( 4 )
+margin_top = 78.0
+margin_right = 1016.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 5 )
 text = "SETTINGS_LANGUAGE_SPANISH"
 flat = true
 
 [node name="Label3" type="Label" parent="TabContainer/Language/LanguageCols"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_top = 120.0
+margin_right = 1016.0
+margin_bottom = 134.0
 
 [node name="FrenchButton" type="Button" parent="TabContainer/Language/LanguageCols"]
-margin_left = 738.0
-margin_right = 1098.0
-margin_bottom = 38.0
-custom_fonts/font = SubResource( 4 )
+margin_top = 138.0
+margin_right = 1016.0
+margin_bottom = 176.0
+custom_fonts/font = SubResource( 5 )
 text = "SETTINGS_LANGUAGE_FRENCH"
 flat = true
 
@@ -325,15 +328,14 @@ __meta__ = {
 }
 
 [node name="InputPopup" type="ConfirmationDialog" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -615.5
-margin_top = -125.0
-margin_right = 615.5
-margin_bottom = 125.0
+margin_left = -200.0
+margin_top = -100.0
+margin_right = 200.0
+margin_bottom = 100.0
 window_title = "SETTINGS_CONTROL_DIALOG_TITLE"
 dialog_text = "SETTINGS_CONTROL_DIALOG_TEXT"
 __meta__ = {

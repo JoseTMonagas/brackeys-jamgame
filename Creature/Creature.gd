@@ -24,6 +24,7 @@ var force_rest = false
 
 onready var rest_timer = $RestTimer
 onready var chase_timer = $ChaseTimer
+onready var swarm_sfx = $Approaching
 
 
 func _ready():
@@ -49,6 +50,8 @@ func _start_rest():
 	if !chase_timer.is_stopped():
 		chase_timer.stop()
 	is_chasing = false
+	if swarm_sfx.playing:
+		swarm_sfx.play()
 	var time = randi() % REST_TIME.MAX + REST_TIME.MIN
 	rest_timer.start(time)
 
@@ -57,6 +60,8 @@ func _start_chase():
 	if !rest_timer.is_stopped():
 		rest_timer.stop()
 	is_chasing = true
+	if !swarm_sfx.playing:
+		swarm_sfx.play()
 	var time = randi() % CHASE_TIME.MAX + CHASE_TIME.MIN
 	chase_timer.start(time)
 	
@@ -74,4 +79,4 @@ func _on_DetectionArea_body_exited(body):
 
 func _on_AttackArea_body_entered(_body):
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	assert(get_tree().change_scene(DEVOURED_SCENE))
+	get_tree().change_scene(DEVOURED_SCENE)

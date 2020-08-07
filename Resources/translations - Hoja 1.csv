@@ -1,0 +1,24 @@
+id,en,es,fr
+TITLE_TITLE,INEXPLICABILIS,INEXPLICABILIS,INEXPLICABILIS
+TITLE_START,START... AGAIN,EMPEZAR DE NUEVO,RECOMMENCER
+TITLE_SETTINGS,SETTINGS,AJUSTES,PARAMÈTRES
+TITLE_CREDITS,CREDITS,CRÉDITOS,CRÉDITS
+TITLE_EXIT,EXIT,SALIDA,SORTIE
+SETTINGS_AUDIO,Audio Settings,Configuraciones de audio,Les paramètres audio
+SETTINGS_AUDIO_ALL,All,Todas,Tout
+SETTINGS_AUDIO_BGM,BGM,BGM,BGM
+SETTINGS_AUDIO_SFX,SFX,SFX,SFX
+SETTINGS_MOUSE,Mouse Settings,Configuración del ratón,Paramètres de la souris
+SETTINGS_MOUSE_SENSITIVITY,Mouse Sensitivity,Sensibilidad del ratón,Sensibilité de la souris
+SETTINGS_CONTROL,Input Settings,Ajustes de entrada,Paramètres d'entrée
+SETTINGS_CONTROL_BUTTON_FORWARD,Up,Arriba,en haut
+SETTINGS_CONTROL_BUTTON_BACKWARD,Down,Abajo,Vers le bas
+SETTINGS_CONTROL_BUTTON_LEFT,Left,Izquierda,La gauche
+SETTINGS_CONTROL_BUTTON_RIGHT,Right,Correcto,Droite
+SETTINGS_CONTROL_DIALOG_TITLE,Change Input,cambio de entradas,Renseigner les
+SETTINGS_CONTROL_DIALOG_TEXT,Press a key,presione una tecla,appuyez sur une touche
+SETTINGS_LANGUAGE,Language,Idioma,Langue
+SETTINGS_LANGUAGE_ENGLISH,English,Inglés,Anglais
+SETTINGS_LANGUAGE_SPANISH,Spanish,Español,Espagnol
+SETTINGS_LANGUAGE_FRENCH,French,francés,français
+SETTINGS_RETURN,Return,Regreso,Revenir

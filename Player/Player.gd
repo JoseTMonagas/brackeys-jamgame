@@ -16,6 +16,7 @@ var owned_orb_pink = false
 
 
 onready var camera = $Camera
+onready var footstep_sfx = $Footsteps
 
 var MOUSE_SENSITIVITY = 0.05
 
@@ -25,7 +26,10 @@ func _ready():
 func _physics_process(delta):
 	_handle_input()
 	_resolve_movement(delta)
-
+	if velocity.length() > 1 && !footstep_sfx.playing:
+		footstep_sfx.play()
+	else:
+		footstep_sfx.stop()
 
 func _handle_input():
 	direction = Vector3.ZERO
