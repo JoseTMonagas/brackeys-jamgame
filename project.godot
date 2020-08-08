@@ -21,17 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="inexplicabilis"
-config/description="Can you escape from this endless torment?"
 run/main_scene="res://UI/Start.tscn"
-boot_splash/image="res://UI/LFJ new letters.png"
-boot_splash/bg_color=Color( 0.533333, 0, 0.105882, 1 )
-config/icon="res://Resources/Aseprite/Thumbnail.png"
-config/windows_native_icon="res://Resources/Aseprite/Thumbnail.ico"
 
 [autoload]
 
 Global="*res://Global/Global.gd"
-
-[locale]
-
-translations=PoolStringArray( "res://Resources/translations - Hoja 1.en.translation", "res://Resources/translations - Hoja 1.es.translation", "res://Resources/translations - Hoja 1.fr.translation" )
