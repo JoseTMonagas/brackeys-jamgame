@@ -39,4 +39,8 @@ window/stretch/aspect="keep"
 
 [locale]
 
-translations=PoolStringArray( "res://Resources/translations - Hoja 1.en.translation", "res://Resources/translations - Hoja 1.es.translation", "res://Resources/translations - Hoja 1.fr.translation" )
+translations=PoolStringArray( "res://Resources/translations/translations - Hoja 1(1).en.translation", "res://Resources/translations/translations - Hoja 1(1).es.translation", "res://Resources/translations/translations - Hoja 1(1).fr.translation" )
+
+[rendering]
+
+environment/default_clear_color=Color( 0.0117647, 0.00784314, 0.00784314, 1 )
