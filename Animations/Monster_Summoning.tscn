@@ -45,7 +45,7 @@ position = Vector2( 512, 288 )
 scale = Vector2( 1.5135, 1.42601 )
 texture = ExtResource( 1 )
 vframes = 24
-frame = 3
+frame = 23
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/play_movie_backwards = SubResource( 1 )
