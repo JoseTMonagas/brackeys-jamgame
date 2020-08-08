@@ -41,11 +41,11 @@ tracks/0/keys = {
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 511.815, 359.944 )
+position = Vector2( 512, 288 )
 scale = Vector2( 1.5135, 1.42601 )
 texture = ExtResource( 1 )
 vframes = 24
-frame = 21
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/play_movie_backwards = SubResource( 1 )

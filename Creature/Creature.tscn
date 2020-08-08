@@ -6,27 +6,27 @@
 [ext_resource path="res://Creature/creature.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 3
+flags = 19
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 3
+flags = 19
 atlas = ExtResource( 1 )
 region = Rect2( 64, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 3
+flags = 19
 atlas = ExtResource( 1 )
 region = Rect2( 128, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 3
+flags = 19
 atlas = ExtResource( 1 )
 region = Rect2( 192, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 3
+flags = 19
 atlas = ExtResource( 1 )
 region = Rect2( 256, 0, 64, 64 )
 
