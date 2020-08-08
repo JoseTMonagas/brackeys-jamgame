@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Resources/Aseprite/FarmFront.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Aseprite/FarmSide.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Resources/Aseprite/FarmBack.png" type="Texture" id=4]
 [ext_resource path="res://Resources/Aseprite/FarmDestro.png" type="Texture" id=5]
 [ext_resource path="res://Resources/Aseprite/FarmDestroGround.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Aseprite/CabanFloor.png" type="Texture" id=7]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.803373, 0.78514, 0.298531 )
@@ -131,6 +132,22 @@ transform = Transform( -1.62921e-07, -0.707107, 0.707107, 0, 0.707107, 0.707107,
 texture = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Roof6"]
+
+[node name="Floor" type="StaticBody" parent="Unlocked"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Unlocked/Floor"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Unlocked/Floor"]
+transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, -2.58046, -7.59176 )
+texture = ExtResource( 7 )
+
+[node name="Floor2" type="StaticBody" parent="Unlocked"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Unlocked/Floor2"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Unlocked/Floor2"]
+transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, -2.57716, -2.58633 )
+texture = ExtResource( 7 )
 
 [node name="Locked" type="Spatial" parent="."]
 visible = false
