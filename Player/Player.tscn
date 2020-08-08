@@ -26,3 +26,7 @@ emission_angle_enabled = true
 
 [node name="Fog" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.39583 )
+
+[node name="MenuCD" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
