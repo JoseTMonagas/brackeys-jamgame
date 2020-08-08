@@ -3,7 +3,7 @@ extends KinematicBody
 signal toggle_menu
 
 
-const SPEED = 10
+const SPEED = 3.5
 
 var direction = Vector3.ZERO
 var velocity = Vector3.ZERO
@@ -21,7 +21,7 @@ onready var camera = $Camera
 onready var footstep_sfx = $Footsteps
 onready var menu_cd = $MenuCD
 
-var MOUSE_SENSITIVITY = 0.05
+var MOUSE_SENSITIVITY = 0.05 + Global.load_setting("MOUSE", "SENSITIVITY", 0)
 
 
 func _ready():
