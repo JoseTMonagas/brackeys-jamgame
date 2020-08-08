@@ -29,6 +29,8 @@ func _play_cutscene(node_name, animation_name, backwards=false):
 
 func _on_Monument1_activated():
 	_play_cutscene("PeredoSummoning", "play_movie_backwards")
+	creature.queue_free()
+	Global.change_scene("res://UI/Victory.tscn")
 
 
 func _on_MonumentBlue_activated():
@@ -38,7 +40,7 @@ func _on_MonumentBlue_activated():
 
 
 func _on_MonumentGreen_activated():
-	_play_cutscene("TreeDestruction", "PlayMovieBackwads", true)
+	_play_cutscene("TreeDestruction", "PlayMovieBackwards", true)
 	TreeLocked.visible = false
 	get_tree().queue_delete(TreeLocked)
 	TreeUnlocked.visible = true
@@ -50,6 +52,7 @@ func _on_MonumentYellow_activated():
 
 
 func _on_MonumentPink_activated():
+	_play_cutscene("BarsSummonning", "PlayMovieBackwards", true)
 	get_tree().queue_delete(BarsLocked)
 
 

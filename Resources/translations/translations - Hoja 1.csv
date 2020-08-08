@@ -30,3 +30,5 @@ MENU_MAIN,Return to main menu,Volver al menú principal,Retour au menu principal
 MENU_QUIT,Exit,Salir,Sortie
 INSTRUCTIONS,"Gather 5 orbs and put them in their monuments, let the world heal itself.","Reune 5 orbes y ponlos en sus monumentos, deja que el mundo se sane por si mismo.","Recueillir 5 orbes et les mettre dans leurs monuments, que le monde se guérir."
 INSTRUCTIONS_KEY,Press any key to continue,Pulse cualquier tecla para continuar,Appuyez sur n'importe quelle touche pour continuer
+VICTORY_TITLE,You escaped the loop,Escapaste del bucle,Vous échappé la boucle
+VICTORY_QUESTION,...Right?,...¿Correcto?,...Vrai?

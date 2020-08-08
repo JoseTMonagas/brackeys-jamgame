@@ -3,7 +3,7 @@ extends KinematicBody
 signal toggle_menu
 
 
-const SPEED = 3.5
+const SPEED = 10
 
 var direction = Vector3.ZERO
 var velocity = Vector3.ZERO

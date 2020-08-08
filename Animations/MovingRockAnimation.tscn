@@ -6,7 +6,6 @@
 [sub_resource type="Animation" id=1]
 resource_name = "PlayMovieBackwards"
 length = 3.0
-loop = true
 step = 0.15
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
