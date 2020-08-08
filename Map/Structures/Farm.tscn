@@ -17,6 +17,7 @@ extents = Vector3( 0.0612255, 1.23154, 2.51885 )
 [node name="Farm" type="Spatial"]
 
 [node name="Unlocked" type="Spatial" parent="."]
+visible = false
 
 [node name="Front2" type="StaticBody" parent="Unlocked"]
 
@@ -138,7 +139,7 @@ texture = ExtResource( 3 )
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Floor"]
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Floor"]
-transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, -2.54547, -7.59176 )
+transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, -2.51535, -7.59176 )
 texture = ExtResource( 7 )
 
 [node name="Floor2" type="StaticBody" parent="Unlocked"]
@@ -146,11 +147,10 @@ texture = ExtResource( 7 )
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Floor2"]
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Floor2"]
-transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, -2.54752, -2.58633 )
+transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, -2.50337, -2.58633 )
 texture = ExtResource( 7 )
 
 [node name="Locked" type="Spatial" parent="."]
-visible = false
 
 [node name="Side" type="StaticBody" parent="Locked"]
 
