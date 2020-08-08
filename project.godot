@@ -26,3 +26,15 @@ run/main_scene="res://UI/Start.tscn"
 [autoload]
 
 Global="*res://Global/Global.gd"
+<<<<<<< HEAD
+=======
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[locale]
+
+translations=PoolStringArray( "res://Resources/translations - Hoja 1.en.translation", "res://Resources/translations - Hoja 1.es.translation", "res://Resources/translations - Hoja 1.fr.translation" )
+>>>>>>> f668db20b398a3ea55e5b53631ad0b5635ffba86

@@ -19,7 +19,6 @@ func _ready():
 #sends the player the orb's number
 func player_owns(var orb_number):
 	player.owns_orb(orb_number)
-	pass
 
 
 
@@ -29,5 +28,3 @@ func _on_Area_body_entered(body):
 		player_owned = true
 		player_owns("orb_pink")
 		get_tree().queue_delete(self)
-		pass
-	pass # Replace with function body.

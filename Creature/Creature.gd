@@ -1,6 +1,6 @@
 extends KinematicBody
 
-const SPEED = 9.8
+const SPEED = 3
 const REST_TIME = {
 	"MIN": 30,
 	"MAX": 60
@@ -50,6 +50,7 @@ func _start_rest():
 	if !chase_timer.is_stopped():
 		chase_timer.stop()
 	is_chasing = false
+	visible = false
 	if swarm_sfx.playing:
 		swarm_sfx.play()
 	var time = randi() % REST_TIME.MAX + REST_TIME.MIN
@@ -59,6 +60,7 @@ func _start_rest():
 func _start_chase():
 	if !rest_timer.is_stopped():
 		rest_timer.stop()
+	visible = true
 	is_chasing = true
 	if !swarm_sfx.playing:
 		swarm_sfx.play()
