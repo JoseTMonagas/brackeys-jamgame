@@ -16,7 +16,6 @@ extents = Vector3( 0.0612255, 1.23154, 2.51885 )
 [node name="Farm" type="Spatial"]
 
 [node name="Unlocked" type="Spatial" parent="."]
-visible = false
 
 [node name="Front2" type="StaticBody" parent="Unlocked"]
 
@@ -134,6 +133,7 @@ texture = ExtResource( 3 )
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Roof6"]
 
 [node name="Locked" type="Spatial" parent="."]
+visible = false
 
 [node name="Side" type="StaticBody" parent="Locked"]
 

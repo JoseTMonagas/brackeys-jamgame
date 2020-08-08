@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Resources/Aseprite/OutterWall.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Aseprite/Fence.png" type="Texture" id=1]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 5.18737, 1.56602, 0.001 )

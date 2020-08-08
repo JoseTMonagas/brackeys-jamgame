@@ -18,6 +18,7 @@ shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
 current = true
+far = 50.0
 
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 2 )
@@ -25,3 +26,4 @@ bus = "Sfx"
 emission_angle_enabled = true
 
 [node name="Fog" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.39583 )
