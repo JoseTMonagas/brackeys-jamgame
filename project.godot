@@ -32,6 +32,11 @@ config/windows_native_icon="res://Resources/Aseprite/Thumbnail.ico"
 
 Global="*res://Global/Global.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [locale]
 
 translations=PoolStringArray( "res://Resources/translations - Hoja 1.en.translation", "res://Resources/translations - Hoja 1.es.translation", "res://Resources/translations - Hoja 1.fr.translation" )
