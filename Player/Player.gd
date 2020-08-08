@@ -1,7 +1,7 @@
 extends KinematicBody
 
 
-const SPEED = 10
+const SPEED = 3.5
 
 var direction = Vector3.ZERO
 var velocity = Vector3.ZERO
@@ -64,23 +64,18 @@ func _input(event):
 
 
 #check whether the player owns orbs to update monuments sprites and activate rewinds
-func owns_orb(var orb_number):
+func owns_orb(orb_number):
 	match orb_number:
 		"orb_white":
 			owned_orb_white=true
-			pass
 		"orb_blue":
 			owned_orb_blue=true
-			pass
 		"orb_green":
 			owned_orb_green=true
-			pass
 		"orb_yellow":
 			owned_orb_yellow=true
-			pass
 		"orb_pink":
 			owned_orb_pink=true
-			pass
 
 
 
