@@ -28,8 +28,8 @@ func _on_Monument1_activated():
 
 func _on_MonumentBlue_activated():
 	FarmUnlocked.visible = true
+	FarmLocked.visible = false
 	get_tree().queue_delete(FarmLocked)
-#	FarmLocked.visible = false
 	#_play_cutscene("PeredoSummoning", "play_movie_backwards")
 
 func _on_MonumentGreen_activated():

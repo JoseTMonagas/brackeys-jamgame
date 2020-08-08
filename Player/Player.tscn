@@ -18,7 +18,8 @@ shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
 current = true
-far = 50.0
+fov = 45.0
+far = 30.0
 
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 2 )
