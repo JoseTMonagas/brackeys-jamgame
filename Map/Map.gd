@@ -38,12 +38,14 @@ func _on_MonumentBlue_activated():
 
 
 func _on_MonumentGreen_activated():
+	_play_cutscene("TreeDestruction", "PlayMovieBackwads", true)
 	TreeLocked.visible = false
 	get_tree().queue_delete(TreeLocked)
 	TreeUnlocked.visible = true
 
 
 func _on_MonumentYellow_activated():
+	_play_cutscene("MovingRockAnimation", "PlayMovieBackwards", true)
 	RockLocked.translation.z = -33
 
 
