@@ -1,0 +1,34 @@
+id,en,es,fr
+TITLE_TITLE,INEXPLICABILIS,INEXPLICABILIS,INEXPLICABILIS
+TITLE_START,START... AGAIN,EMPEZAR DE NUEVO,RECOMMENCER
+TITLE_SETTINGS,SETTINGS,AJUSTES,PARAMÈTRES
+TITLE_CREDITS,CREDITS,CRÉDITOS,CRÉDITS
+TITLE_EXIT,EXIT,SALIR,SORTIE
+SETTINGS_AUDIO,Audio Settings,Configuraciones de audio,Les paramètres audio
+SETTINGS_AUDIO_ALL,All,Todas,Tout
+SETTINGS_AUDIO_BGM,BGM,BGM,BGM
+SETTINGS_AUDIO_SFX,SFX,SFX,SFX
+SETTINGS_MOUSE,Mouse Settings,Configuración del ratón,Paramètres de la souris
+SETTINGS_MOUSE_SENSITIVITY,Mouse Sensitivity,Sensibilidad del ratón,Sensibilité de la souris
+SETTINGS_CONTROL,Input Settings,Ajustes de entrada,Paramètres d'entrée
+SETTINGS_CONTROL_BUTTON_FORWARD,Up,Arriba,en haut
+SETTINGS_CONTROL_BUTTON_BACKWARD,Down,Abajo,Vers le bas
+SETTINGS_CONTROL_BUTTON_LEFT,Left,Izquierda,La gauche
+SETTINGS_CONTROL_BUTTON_RIGHT,Right,DERECHA,Droite
+SETTINGS_CONTROL_DIALOG_TITLE,Change Input,Configurar Controles,Renseigner les
+SETTINGS_CONTROL_DIALOG_TEXT,Press a key,Presione una tecla,appuyez sur une touche
+SETTINGS_LANGUAGE,Language,Idioma,Langue
+SETTINGS_LANGUAGE_ENGLISH,English,Inglés,Anglais
+SETTINGS_LANGUAGE_SPANISH,Spanish,Español,Espagnol
+SETTINGS_LANGUAGE_FRENCH,French,francés,français
+SETTINGS_RETURN,Return,Regreso,Revenir
+CREDITS_TITLE,Credits,créditos,Crédits
+CREDITS_TEMPLAR,"Most things related to the monster, and sound by LFJ Templar","La mayoria de cosas relacionadas con el monstruo y el sonido, por LFJ Templar","La plupart des choses liées au monstre, et son par LFJ Templiers"
+CREDITS_GODOT,"Everything else, LFJ Saracen","Todo lo demás, LFJ sarraceno","Tout le reste, Sarrasins LFJ"
+CREDITS_SFX,Some sound effects were downloaded from freesound.org,Algunos efectos de sonido fueron descargados de freesound.org,Certains effets sonores ont été téléchargés à partir freesound.org
+MENU_MAIN,Return to main menu,Volver al menú principal,Retour au menu principal
+MENU_QUIT,Exit,Salir,Sortie
+INSTRUCTIONS,"Gather 5 orbs and put them in their monuments, let the world heal itself.","Reune 5 orbes y ponlos en sus monumentos, deja que el mundo se sane por si mismo.","Recueillir 5 orbes et les mettre dans leurs monuments, que le monde se guérir."
+INSTRUCTIONS_KEY,Press any key to continue,Pulse cualquier tecla para continuar,Appuyez sur n'importe quelle touche pour continuer
+VICTORY_TITLE,You escaped the loop,Escapaste del bucle,Vous échappé la boucle
+VICTORY_QUESTION,...Right?,...¿Correcto?,...Vrai?

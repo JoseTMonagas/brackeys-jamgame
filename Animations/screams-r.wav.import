@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/screams-r.wav-65b107b34a63e39d01bf01a8cb7e9b94.sample"
+
+[deps]
+
+source_file="res://Animations/screams-r.wav"
+dest_files=[ "res://.import/screams-r.wav-65b107b34a63e39d01bf01a8cb7e9b94.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=false
+compress/mode=0
