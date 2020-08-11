@@ -1,0 +1,9 @@
+*Add Volumetric fog -- Done
+*Add dynamic light source -- In process
+*Add more obstacles in the map -- pending
+*Modify Tileset (ground's tiles) -- pending 
+*Change behaviour of the monster -- pending 
+*Make the game more moody -- In process
+*Look up with the mouse (if not we could make the monster go over the player's head, so that he feels uncomfortable) -- pending 
+*Fix & Add more cinematics at the beginning of the game (in order) -- pending 
+*Make some more obstacles -- pending 
