@@ -49,6 +49,7 @@ script = ExtResource( 2 )
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 billboard = 2
+shaded = true
 texture = ExtResource( 1 )
 vframes = 10
 hframes = 4
