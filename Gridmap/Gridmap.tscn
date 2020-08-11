@@ -16,7 +16,7 @@
 [sub_resource type="PlaneMesh" id=1]
 
 [sub_resource type="SpatialMaterial" id=2]
-flags_unshaded = true
+vertex_color_use_as_albedo = true
 albedo_texture = ExtResource( 1 )
 
 [sub_resource type="BoxShape" id=3]
@@ -25,7 +25,6 @@ extents = Vector3( 1, 0.001, 1 )
 [sub_resource type="PlaneMesh" id=4]
 
 [sub_resource type="SpatialMaterial" id=5]
-flags_unshaded = true
 albedo_texture = ExtResource( 3 )
 
 [sub_resource type="BoxShape" id=6]
@@ -34,7 +33,6 @@ extents = Vector3( 1, 0.001, 1 )
 [sub_resource type="PlaneMesh" id=7]
 
 [sub_resource type="SpatialMaterial" id=8]
-flags_unshaded = true
 albedo_texture = ExtResource( 2 )
 
 [sub_resource type="BoxShape" id=9]
@@ -43,34 +41,27 @@ extents = Vector3( 1, 0.001, 1 )
 [sub_resource type="PlaneMesh" id=10]
 
 [sub_resource type="SpatialMaterial" id=43]
-flags_unshaded = true
 albedo_texture = ExtResource( 4 )
 
 [sub_resource type="BoxShape" id=12]
 extents = Vector3( 1, 0.001, 1 )
 
 [sub_resource type="SpatialMaterial" id=47]
-flags_unshaded = true
 albedo_texture = ExtResource( 6 )
 
 [sub_resource type="SpatialMaterial" id=51]
-flags_unshaded = true
 albedo_texture = ExtResource( 8 )
 
 [sub_resource type="SpatialMaterial" id=15]
-flags_unshaded = true
 albedo_texture = ExtResource( 7 )
 
 [sub_resource type="SpatialMaterial" id=16]
-flags_unshaded = true
 albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=17]
-flags_unshaded = true
 albedo_texture = ExtResource( 10 )
 
 [sub_resource type="SpatialMaterial" id=18]
-flags_unshaded = true
 albedo_texture = ExtResource( 9 )
 
 [sub_resource type="BoxShape" id=19]
@@ -215,18 +206,22 @@ shape = SubResource( 12 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08378, 0.605629, 1.99447 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Wheat"]
+shaded = true
 texture = ExtResource( 11 )
 
 [node name="Sprite3D3" type="Sprite3D" parent="Wheat"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.616742 )
+shaded = true
 texture = ExtResource( 11 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Wheat"]
 transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0.316604, 0, -0.326361 )
+shaded = true
 texture = ExtResource( 11 )
 
 [node name="Sprite3D4" type="Sprite3D" parent="Wheat"]
 transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -0.319454, 0, -0.326361 )
+shaded = true
 texture = ExtResource( 11 )
 
 [node name="StaticBody" type="StaticBody" parent="Wheat"]
@@ -251,5 +246,6 @@ shape = SubResource( 22 )
 [node name="GrassProp" type="MeshInstance" parent="."]
 transform = Transform( -1.62921e-07, 1, 0, 1.62921e-07, 2.65431e-14, 1, 1, 1.62921e-07, -1.62921e-07, 0, 0.963739, 4.98606 )
 cast_shadow = 0
+use_in_baked_light = true
 mesh = SubResource( 23 )
 material/0 = SubResource( 24 )

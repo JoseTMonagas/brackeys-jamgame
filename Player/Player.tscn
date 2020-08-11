@@ -32,3 +32,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.39583 )
 [node name="MenuCD" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.999949, -0.0101402, 0, 0.0101402, 0.999949, 0, 0.532599, 1 )
+light_energy = 5.8
+spot_range = 9.0
+spot_angle = 33.6307

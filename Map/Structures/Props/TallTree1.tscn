@@ -10,7 +10,9 @@ radius = 0.36239
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="Sprite3D" type="Sprite3D" parent="StaticBody"]
+modulate = Color( 0.390625, 0.315306, 0.187683, 1 )
 billboard = 2
+shaded = true
 texture = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
