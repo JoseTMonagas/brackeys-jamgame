@@ -22,6 +22,7 @@ visible = false
 [node name="Front2" type="StaticBody" parent="Unlocked"]
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Front2"]
+shaded = true
 texture = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Front2"]
@@ -36,6 +37,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Side"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.57433, -1.29988, -2.52823 )
+shaded = true
 texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Side"]
@@ -47,6 +49,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.09426 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Side4"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.57433, -1.29988, -2.52823 )
+shaded = true
 texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Side4"]
@@ -58,6 +61,7 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 2.53058
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Back"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.574, 0, -2.528 )
+shaded = true
 texture = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Back"]
@@ -69,6 +73,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.17146, 0, 0 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Side2"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.5973, -1.29988, -2.52823 )
+shaded = true
 texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Side2"]
@@ -80,6 +85,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.17146, 0, -5.08151 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Side3"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.5973, -1.29988, -2.52823 )
+shaded = true
 texture = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Side3"]
@@ -90,6 +96,7 @@ shape = SubResource( 2 )
 transform = Transform( -1.62921e-07, 0.707107, 0.707107, 0, 0.707107, -0.707107, -1, -1.15202e-07, -1.15202e-07, -1.36225, 1.34914, -2.23209 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Roof"]
+shaded = true
 texture = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Roof"]
@@ -98,6 +105,7 @@ texture = ExtResource( 3 )
 transform = Transform( -1.62921e-07, 0.707107, 0.707107, 0, 0.707107, -0.707107, -1, -1.15202e-07, -1.15202e-07, -1.36225, 1.34914, -5.21464 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Roof2"]
+shaded = true
 texture = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Roof2"]
@@ -106,6 +114,7 @@ texture = ExtResource( 3 )
 transform = Transform( -1.62921e-07, 0.707107, 0.707107, 0, 0.707107, -0.707107, -1, -1.15202e-07, -1.15202e-07, -1.36225, 1.34914, -8.13593 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Roof3"]
+shaded = true
 texture = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Roof3"]
@@ -114,6 +123,7 @@ texture = ExtResource( 3 )
 transform = Transform( -1.62921e-07, -0.707107, 0.707107, 0, 0.707107, 0.707107, -1, 1.15202e-07, -1.15202e-07, 1.32613, 1.34914, -2.23209 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Roof4"]
+shaded = true
 texture = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Roof4"]
@@ -122,6 +132,7 @@ texture = ExtResource( 3 )
 transform = Transform( -1.62921e-07, -0.707107, 0.707107, 0, 0.707107, 0.707107, -1, 1.15202e-07, -1.15202e-07, 1.32613, 1.34914, -5.3023 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Roof5"]
+shaded = true
 texture = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Roof5"]
@@ -130,6 +141,7 @@ texture = ExtResource( 3 )
 transform = Transform( -1.62921e-07, -0.707107, 0.707107, 0, 0.707107, 0.707107, -1, 1.15202e-07, -1.15202e-07, 1.32613, 1.34914, -8.13595 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Roof6"]
+shaded = true
 texture = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Unlocked/Roof6"]
@@ -140,6 +152,7 @@ texture = ExtResource( 3 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Floor"]
 transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, -2.51535, -7.59176 )
+shaded = true
 texture = ExtResource( 7 )
 
 [node name="Floor2" type="StaticBody" parent="Unlocked"]
@@ -148,6 +161,7 @@ texture = ExtResource( 7 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/Floor2"]
 transform = Transform( -1.62921e-07, -1, 0, -1.62921e-07, 2.65431e-14, 1, -1, 1.62921e-07, -1.62921e-07, 0, -2.50337, -2.58633 )
+shaded = true
 texture = ExtResource( 7 )
 
 [node name="Locked" type="Spatial" parent="."]
@@ -156,6 +170,7 @@ texture = ExtResource( 7 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Side"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.57433, -1.88107, -2.5524 )
+shaded = true
 texture = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Side"]
@@ -167,6 +182,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.09662 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Side2"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.57433, -1.88107, -2.5524 )
+shaded = true
 texture = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Side2"]
@@ -178,6 +194,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1144, 0, -5.09662 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Side3"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.57433, -1.88107, -2.5524 )
+shaded = true
 texture = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Side3"]
@@ -189,6 +206,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1144, 0, -0.0207753 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Side4"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -2.57433, -1.88107, -2.5524 )
+shaded = true
 texture = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Side4"]
@@ -199,6 +217,7 @@ shape = SubResource( 2 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Front"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.881, 0 )
+shaded = true
 texture = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Front"]
@@ -214,6 +233,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.2203 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Back"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.881, 0 )
+shaded = true
 texture = ExtResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Back"]
@@ -231,6 +251,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.04969, -1.881, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground"]
@@ -246,6 +267,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground5"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.04969, -1.881, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground5"]
@@ -261,6 +283,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground4"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.04969, -1.7621, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground4"]
@@ -276,6 +299,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground2"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.04969, -1.65393, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground2"]
@@ -291,6 +315,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground7"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.04969, -1.881, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground7"]
@@ -306,6 +331,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground6"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.04969, -1.67718, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground6"]
@@ -321,6 +347,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground8"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.04969, -1.67018, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground8"]
@@ -336,6 +363,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground9"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.04969, -1.881, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground9"]
@@ -351,6 +379,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground10"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.16455, -1.96274, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground10"]
@@ -366,6 +395,7 @@ transform = Transform( -1.62921e-07, 1, 1.62921e-07, 0, -1.62921e-07, 1, 1, 1.62
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground11"]
 transform = Transform( 1, 0, 0, 0, 1, 4.32443e-21, 0, 4.32443e-21, 1, 1.10719, -1.75931, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground11"]
@@ -381,6 +411,7 @@ transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0.18696
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/Grounds/Ground3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, -4.26326e-14, 1, 0.983755, -1.77915, 0 )
+shaded = true
 texture = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Locked/Grounds/Ground3"]

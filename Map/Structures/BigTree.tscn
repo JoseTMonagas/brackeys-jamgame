@@ -59,6 +59,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300354, -0.282696, 0 )
 shape = SubResource( 1 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Locked/StaticBody"]
+shaded = true
 texture = ExtResource( 2 )
 vframes = 2
 
@@ -77,6 +78,7 @@ shape = SubResource( 3 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Unlocked/StaticBody"]
 billboard = 2
+shaded = true
 texture = ExtResource( 1 )
 hframes = 6
 
