@@ -35,6 +35,8 @@ one_shot = true
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.999949, -0.0101402, 0, 0.0101402, 0.999949, 0, 0.532599, 1 )
+light_color = Color( 0.545098, 0.545098, 0.545098, 1 )
 light_energy = 5.8
+light_bake_mode = 0
 spot_range = 9.0
 spot_angle = 33.6307
