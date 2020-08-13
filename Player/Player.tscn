@@ -35,7 +35,8 @@ wait_time = 0.5
 one_shot = true
 
 [node name="SpotLight" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.978653, 0.205521, 0, -0.205521, 0.978653, 0, 0.660942, 1 )
+transform = Transform( 1, 0, 0, 0, 0.978653, 0.205521, 0, -0.205521, 0.978653, 0, 0.0875334, 0.383251 )
+visible = false
 light_color = Color( 0.545098, 0.545098, 0.545098, 1 )
 light_energy = 10.0
 light_bake_mode = 0

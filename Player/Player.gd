@@ -29,8 +29,11 @@ var MOUSE_SENSITIVITY = 0.05 + Global.load_setting("MOUSE", "SENSITIVITY", 0) #H
 var spotlight_mouse_sensitivity = 0.002
 
 
+
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	flashlight.visible = true
 
 
 func _physics_process(delta):
@@ -83,6 +86,12 @@ func _input(event):
 		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			flashlight.rotate_y(-event.relative.x * spotlight_mouse_sensitivity)
 			flashlight.rotate_x(-event.relative.y * spotlight_mouse_sensitivity)
+	
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and flashlight.visible == true:
+			flashlight.visible = false
+		elif event.button_index == BUTTON_LEFT and flashlight.visible == false:
+			flashlight.visible = true
 
 
 
