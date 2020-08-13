@@ -8,6 +8,9 @@ const SPEED = 3.5
 var direction = Vector3.ZERO
 var velocity = Vector3.ZERO
 
+#Change to lantern movement
+#var is_lantern_pressed:bool = false
+
 
 #owned orbs
 var owned_orb_white = false
@@ -21,7 +24,7 @@ onready var camera = $Camera
 onready var footstep_sfx = $Footsteps
 onready var menu_cd = $MenuCD
 
-var MOUSE_SENSITIVITY = 0.05 + Global.load_setting("MOUSE", "SENSITIVITY", 0)
+var MOUSE_SENSITIVITY = 0.05 + Global.load_setting("MOUSE", "SENSITIVITY", 0) #Here's the bug that wouldn't allow you to change mosue sensitivity
 
 
 func _ready():
@@ -40,10 +43,14 @@ func _physics_process(delta):
 
 func _handle_input():
 	direction = Vector3.ZERO
-	var cam_xform = camera.get_global_transform()
+	
 	
 	var y_input = int(Input.is_action_pressed("ui_up")) - int(Input.is_action_pressed("ui_down"))
 	var x_input = int(Input.is_action_pressed("ui_left")) - int(Input.is_action_pressed("ui_right"))
+	
+	var is_lantern_pressed = Input.is_action_pressed("ui_focus_next")
+	var cam_xform = camera.get_global_transform()
+	
 	
 	direction += -cam_xform.basis.z * y_input
 	direction += -cam_xform.basis.x * x_input
