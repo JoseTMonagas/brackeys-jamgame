@@ -23,8 +23,10 @@ var owned_orb_pink = false
 onready var camera = $Camera
 onready var footstep_sfx = $Footsteps
 onready var menu_cd = $MenuCD
+onready var flashlight = $SpotLight
 
 var MOUSE_SENSITIVITY = 0.05 + Global.load_setting("MOUSE", "SENSITIVITY", 0) #Here's the bug that wouldn't allow you to change mosue sensitivity
+var spotlight_mouse_sensitivity = 0.002
 
 
 func _ready():
@@ -71,8 +73,17 @@ func _resolve_movement(_delta):
 
 
 func _input(event):
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotate_y(deg2rad(event.relative.x * MOUSE_SENSITIVITY * -1))
+	#verifying if shift is pressed
+	var is_lantern_pressed = Input.is_action_pressed("ui_focus_next")
+	
+	if is_lantern_pressed == false:
+		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			rotate_y(deg2rad(event.relative.x * MOUSE_SENSITIVITY * -1))
+	else:
+		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			flashlight.rotate_y(-event.relative.x * spotlight_mouse_sensitivity)
+			flashlight.rotate_x(-event.relative.y * spotlight_mouse_sensitivity)
+
 
 
 #check whether the player owns orbs to update monuments sprites and activate rewinds
@@ -88,6 +99,3 @@ func owns_orb(orb_number):
 			owned_orb_yellow=true
 		"orb_pink":
 			owned_orb_pink=true
-
-
-
