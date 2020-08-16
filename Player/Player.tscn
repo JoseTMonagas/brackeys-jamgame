@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/footstep.wav" type="AudioStream" id=2]
 [ext_resource path="res://Map/Structures/Props/Fog.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Player/SpotLight.gd" type="Script" id=4]
 
 [sub_resource type="CylinderShape" id=1]
 
@@ -38,8 +37,7 @@ one_shot = true
 transform = Transform( 1, 0, 0, 0, 0.978653, 0.205521, 0, -0.205521, 0.978653, 0, 0.0875334, 0.383251 )
 visible = false
 light_color = Color( 0.545098, 0.545098, 0.545098, 1 )
-light_energy = 10.0
+light_energy = 14.0
 light_bake_mode = 0
 spot_range = 9.0
 spot_angle = 18.313
-script = ExtResource( 4 )
