@@ -21,6 +21,14 @@ current = true
 fov = 60.0
 far = 25.0
 
+[node name="SpotLight" type="SpotLight" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 0.978653, 0.205521, 0, -0.205521, 0.978653, 0.14712, -0.0248712, 0.056742 )
+light_color = Color( 0.545098, 0.545098, 0.545098, 1 )
+light_energy = 14.0
+light_bake_mode = 0
+spot_range = 9.0
+spot_angle = 18.313
+
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 2 )
 bus = "Sfx"
@@ -32,12 +40,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.39583 )
 [node name="MenuCD" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
-
-[node name="SpotLight" type="SpotLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.978653, 0.205521, 0, -0.205521, 0.978653, 0, 0.0875334, 0.383251 )
-visible = false
-light_color = Color( 0.545098, 0.545098, 0.545098, 1 )
-light_energy = 14.0
-light_bake_mode = 0
-spot_range = 9.0
-spot_angle = 18.313

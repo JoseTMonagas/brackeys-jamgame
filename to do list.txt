@@ -1,5 +1,6 @@
 *Add Volumetric fog -- Done
 *Add dynamic light source (Flashlight) -- Done
+*Rig flashlight to the main camera -- Pending
 *Add more obstacles in the map -- pending
 *Modify Tileset (ground's tiles) -- pending 
 *Change behaviour of the monster -- In process 

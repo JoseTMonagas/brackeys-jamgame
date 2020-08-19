@@ -10,6 +10,7 @@ extents = Vector3( 0.223102, 0.169125, 0.157969 )
 [node name="Sprite3D" type="Sprite3D" parent="."]
 billboard = 2
 shaded = true
+alpha_cut = 2
 texture = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

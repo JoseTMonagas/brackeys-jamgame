@@ -23,7 +23,7 @@ var owned_orb_pink = false
 onready var camera = $Camera
 onready var footstep_sfx = $Footsteps
 onready var menu_cd = $MenuCD
-onready var flashlight = $SpotLight
+onready var flashlight = $Camera/SpotLight
 
 var MOUSE_SENSITIVITY = 0.05 + Global.load_setting("MOUSE", "SENSITIVITY", 0) #Here's the bug that wouldn't allow you to change mosue sensitivity
 var spotlight_mouse_sensitivity = 0.002
@@ -33,7 +33,7 @@ var spotlight_mouse_sensitivity = 0.002
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	flashlight.visible = true
+#	flashlight.visible = true
 
 
 func _physics_process(delta):
@@ -53,10 +53,11 @@ func _handle_input():
 	var y_input = int(Input.is_action_pressed("ui_up")) - int(Input.is_action_pressed("ui_down"))
 	var x_input = int(Input.is_action_pressed("ui_left")) - int(Input.is_action_pressed("ui_right"))
 	
-	var is_lantern_pressed = Input.is_action_pressed("ui_focus_next")
+#	var is_lantern_pressed = Input.is_action_pressed("ui_focus_next")
 	var cam_xform = camera.get_global_transform()
 	
 	
+
 	direction += -cam_xform.basis.z * y_input
 	direction += -cam_xform.basis.x * x_input
 	direction = direction.normalized()
@@ -77,21 +78,21 @@ func _resolve_movement(_delta):
 
 func _input(event):
 	#verifying if shift is pressed
-	var is_lantern_pressed = Input.is_action_pressed("ui_focus_next")
+#	var is_lantern_pressed = Input.is_action_pressed("ui_focus_next")
 	
-	if is_lantern_pressed == false:
-		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			rotate_y(deg2rad(event.relative.x * MOUSE_SENSITIVITY * -1))
-	else:
-		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			flashlight.rotate_y(-event.relative.x * spotlight_mouse_sensitivity)
-			flashlight.rotate_x(-event.relative.y * spotlight_mouse_sensitivity)
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			camera.rotate_y(deg2rad(event.relative.x * MOUSE_SENSITIVITY * -1))
+			flashlight.rotate_x(deg2rad(event.relative.y * MOUSE_SENSITIVITY * -1))
+#	else:
+#		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+#			flashlight.rotate_y(-event.relative.x * spotlight_mouse_sensitivity)
+#			flashlight.rotate_x(-event.relative.y * spotlight_mouse_sensitivity)
 	
-	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT and flashlight.visible == true:
-			flashlight.visible = false
-		elif event.button_index == BUTTON_LEFT and flashlight.visible == false:
-			flashlight.visible = true
+#	if event is InputEventMouseButton:
+#		if event.button_index == BUTTON_LEFT and flashlight.visible == true:
+#			flashlight.visible = false
+#		elif event.button_index == BUTTON_LEFT and flashlight.visible == false:
+#			flashlight.visible = true
 
 
 
