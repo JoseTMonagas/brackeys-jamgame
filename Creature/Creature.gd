@@ -1,6 +1,6 @@
 extends KinematicBody
 
-const SPEED = 3
+export var SPEED = 3
 const REST_TIME = {
 	"MIN": 30,
 	"MAX": 60

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Resources/Aseprite/Grass.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Aseprite/RoadTop.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Resources/Aseprite/RoadLeft.png" type="Texture" id=10]
 [ext_resource path="res://Resources/Aseprite/Corn.png" type="Texture" id=11]
 [ext_resource path="res://Resources/Aseprite/TallGrass.png" type="Texture" id=12]
+[ext_resource path="res://Resources/Aseprite/GroundWheat.png" type="Texture" id=13]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -40,16 +41,16 @@ extents = Vector3( 1, 0.001, 1 )
 
 [sub_resource type="PlaneMesh" id=10]
 
-[sub_resource type="SpatialMaterial" id=43]
+[sub_resource type="SpatialMaterial" id=11]
 albedo_texture = ExtResource( 4 )
 
 [sub_resource type="BoxShape" id=12]
 extents = Vector3( 1, 0.001, 1 )
 
-[sub_resource type="SpatialMaterial" id=47]
+[sub_resource type="SpatialMaterial" id=13]
 albedo_texture = ExtResource( 6 )
 
-[sub_resource type="SpatialMaterial" id=51]
+[sub_resource type="SpatialMaterial" id=14]
 albedo_texture = ExtResource( 8 )
 
 [sub_resource type="SpatialMaterial" id=15]
@@ -91,6 +92,15 @@ depth_deep_parallax = false
 depth_flip_tangent = false
 depth_flip_binormal = false
 
+[sub_resource type="SpatialMaterial" id=25]
+albedo_texture = ExtResource( 13 )
+
+[sub_resource type="PlaneMesh" id=26]
+material = SubResource( 25 )
+
+[sub_resource type="BoxShape" id=27]
+extents = Vector3( 1, 0.001, 1 )
+
 [node name="Gridmap" type="Spatial"]
 
 [node name="Grass" type="MeshInstance" parent="."]
@@ -129,7 +139,7 @@ shape = SubResource( 9 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06258, 0, -1.96405 )
 use_in_baked_light = true
 mesh = SubResource( 10 )
-material/0 = SubResource( 43 )
+material/0 = SubResource( 11 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadTopRight"]
 
@@ -140,7 +150,7 @@ shape = SubResource( 12 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02963, 0, -0.0404267 )
 use_in_baked_light = true
 mesh = SubResource( 10 )
-material/0 = SubResource( 47 )
+material/0 = SubResource( 13 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadRight"]
 
@@ -151,7 +161,7 @@ shape = SubResource( 12 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97901, 0, 2.1117 )
 use_in_baked_light = true
 mesh = SubResource( 10 )
-material/0 = SubResource( 51 )
+material/0 = SubResource( 14 )
 
 [node name="StaticBody" type="StaticBody" parent="RoadBottomRight"]
 
@@ -249,3 +259,12 @@ cast_shadow = 0
 use_in_baked_light = true
 mesh = SubResource( 23 )
 material/0 = SubResource( 24 )
+
+[node name="WheatGround" type="MeshInstance" parent="."]
+mesh = SubResource( 26 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="WheatGround"]
+
+[node name="CollisionShape" type="CollisionShape" parent="WheatGround/StaticBody"]
+shape = SubResource( 27 )
