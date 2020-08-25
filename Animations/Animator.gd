@@ -16,7 +16,6 @@ func _goto(path):
 
 func play_animation(animation_name):
 	animation_player.play(animation_name)
-	
 
 
 func play_animation_backwards(animation_name):

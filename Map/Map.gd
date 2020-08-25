@@ -52,7 +52,7 @@ func _on_MonumentYellow_activated():
 
 
 func _on_MonumentPink_activated():
-	_play_cutscene("BarsSummonning", "PlayMovieBackwards", true)
+	_play_cutscene("BarsSummonning", "PlayMovieBackwards", false)
 	get_tree().queue_delete(BarsLocked)
 
 
