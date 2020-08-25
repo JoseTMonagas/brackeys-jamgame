@@ -121,7 +121,7 @@ anim_speed = 5.0
 script = ExtResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6207, 1.46673, 0.8564 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.6207, 1.46673, 0.8564 )
 
 [node name="RainParticles" type="CPUParticles" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6207, 8.54367, -7.85642 )

@@ -23,34 +23,41 @@ __meta__ = {
 }
 
 [node name="Padding2" type="Label" parent="Rows"]
-margin_top = 66.0
+margin_top = 51.0
 margin_right = 1024.0
-margin_bottom = 80.0
+margin_bottom = 65.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Title" type="Label" parent="Rows"]
-margin_top = 193.0
+margin_top = 146.0
 margin_right = 1024.0
-margin_bottom = 256.0
+margin_bottom = 209.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 1 )
 text = "INSTRUCTIONS"
 align = 1
 autowrap = true
 
-[node name="Continue" type="Label" parent="Rows"]
-margin_top = 344.0
+[node name="Padding3" type="Label" parent="Rows"]
+margin_top = 291.0
 margin_right = 1024.0
-margin_bottom = 407.0
+margin_bottom = 305.0
+size_flags_vertical = 6
+
+[node name="Continue" type="Label" parent="Rows"]
+margin_top = 386.0
+margin_right = 1024.0
+margin_bottom = 449.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.552941, 0.552941, 0.552941, 1 )
 text = "INSTRUCTIONS_KEY"
 align = 1
 autowrap = true
 
 [node name="Padding" type="Label" parent="Rows"]
-margin_top = 519.0
+margin_top = 533.0
 margin_right = 1024.0
-margin_bottom = 533.0
+margin_bottom = 547.0
 size_flags_vertical = 6
