@@ -25,9 +25,9 @@ onready var footstep_sfx = $Footsteps
 onready var menu_cd = $MenuCD
 onready var flashlight = $Camera/SpotLight
 
+
 var MOUSE_SENSITIVITY = 0.05 + Global.load_setting("MOUSE", "SENSITIVITY", 0) #Here's the bug that wouldn't allow you to change mosue sensitivity
 var spotlight_mouse_sensitivity = 0.002
-
 
 
 

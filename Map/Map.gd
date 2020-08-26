@@ -34,25 +34,25 @@ func _on_Monument1_activated():
 
 
 func _on_MonumentBlue_activated():
-	_play_cutscene("FarmDestruction", "PlayMovieBackwards", true)
+	_play_cutscene("FarmDestruction", "PlayFarmInGame", true)
 	FarmUnlocked.visible = true
 	get_tree().queue_delete(FarmLocked)
 
 
 func _on_MonumentGreen_activated():
-	_play_cutscene("TreeDestruction", "PlayMovieBackwards", true)
+	_play_cutscene("TreeDestruction", "PlayTreeInGame", true)
 	TreeLocked.visible = false
 	get_tree().queue_delete(TreeLocked)
 	TreeUnlocked.visible = true
 
 
 func _on_MonumentYellow_activated():
-	_play_cutscene("MovingRockAnimation", "PlayMovieBackwards", true)
+	_play_cutscene("MovingRockAnimation", "PlayRockInGame", true)
 	RockLocked.translation.z = -33
 
 
 func _on_MonumentPink_activated():
-	_play_cutscene("BarsSummonning", "PlayMovieBackwards", false)
+	_play_cutscene("BarsSummonning", "PlayBarsInGame", false)
 	get_tree().queue_delete(BarsLocked)
 
 

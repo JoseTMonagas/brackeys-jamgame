@@ -29,7 +29,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 1.8 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
-"args": [ "res://UI/Instructions.tscn" ],
+"args": [ "res://Animations/Monster_Summoning.tscn" ],
 "method": "_goto"
 } ]
 }
