@@ -18,23 +18,9 @@ var newTryBars:bool= true
 
 
 func _ready():
+	animation_player.connect("animation_finished", self, "_on_AnimationPlayer_animation_finished")
 	if animation_player.has_animation("default"):
 		animation_player.play("default")
-	elif animation_player.has_animation("play_movie_forward") and newTrySummon:
-		animation_player.play("play_movie_forward")
-		newTrySummon = false
-	elif animation_player.has_animation("PlayFarm") and newTryFarm:
-		animation_player.play("PlayFarm")
-		newTryFarm = false
-	elif animation_player.has_animation("PlayTree") and newTryTree:
-		animation_player.play("PlayTree")
-		newTryTree = false
-	elif animation_player.has_animation("PlayRock") and newTryRock:
-		animation_player.play("PlayRock")
-		newTryRock = false
-	elif animation_player.has_animation("PlayBars") and newTryBars:
-		animation_player.play_backwards("PlayBars")
-		newTryBars = false
 
 
 func _goto(path):
@@ -49,5 +35,5 @@ func play_animation_backwards(animation_name):
 	animation_player.play_backwards(animation_name)
 
 
-func _on_AnimationPlayer_animation_finished(_anim_name):
+func _on_AnimationPlayer_animation_finished(anim_name):
 	emit_signal("cutscene_ended")

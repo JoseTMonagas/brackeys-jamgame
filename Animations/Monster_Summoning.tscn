@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/monster_outing.png" type="Texture" id=1]
 [ext_resource path="res://Animations/Animator.gd" type="Script" id=2]
+[ext_resource path="res://Creature/creature.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "play_movie_backwards"
@@ -35,19 +36,17 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 23 ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 5 ),
+"times": PoolRealArray( 2.2 ),
 "transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [ "res://Animations/TreeDestruction.tscn" ],
-"method": "_goto"
-} ]
+"update": 1,
+"values": [ true ]
 }
 
 [node name="Monster_Summoning" type="Node2D"]
@@ -58,8 +57,12 @@ position = Vector2( 512, 288 )
 scale = Vector2( 1.5135, 1.42601 )
 texture = ExtResource( 1 )
 vframes = 24
+frame = 23
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/play_movie_backwards = SubResource( 1 )
 anims/play_movie_forward = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
