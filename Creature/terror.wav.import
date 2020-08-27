@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/terror.wav-84c1d73a06bfe4fc78406cda7b5fa94f.sample"
+
+[deps]
+
+source_file="res://Creature/terror.wav"
+dest_files=[ "res://.import/terror.wav-84c1d73a06bfe4fc78406cda7b5fa94f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=true
+compress/mode=0
